@@ -104,13 +104,13 @@ export const Pricing = () => {
           transition={{ duration: 0.8, delay: 0.2 }}
         >
           <motion.span 
-            className="inline-block px-3 py-1.5 sm:px-4 sm:py-2 bg-gradient-to-br from-green-600 via-green-700 to-green-800 text-white text-xs sm:text-sm font-bold rounded-full mb-3 sm:mb-4 shadow-md"
+            className="inline-block px-3 py-1.5 sm:px-4 sm:py-2 bg-gradient-to-br from-[hsl(270,80%,65%)] via-[hsl(260,85%,60%)] to-[hsl(220,90%,60%)] text-white text-xs sm:text-sm font-bold rounded-full mb-3 sm:mb-4 shadow-md"
             whileHover={{ scale: 1.05 }}
           >
             Transparent Pricing
           </motion.span>
-          <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-3 sm:mb-4 text-green-800 dark:text-foreground leading-tight">
-            Simple, <span className="text-green-600 dark:text-gold">Usage-Based</span> Packages
+          <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-3 sm:mb-4 text-[hsl(250,50%,20%)] dark:text-foreground leading-tight">
+            Simple, <span className="bg-gradient-to-r from-[hsl(270,80%,65%)] to-[hsl(220,90%,60%)] bg-clip-text text-transparent">Usage-Based</span> Packages
           </h2>
           <p className="text-base sm:text-lg md:text-xl text-muted-foreground max-w-2xl leading-relaxed">
             Choose a data entry package sized to your volume. Scale anytime. No hidden fees.
@@ -145,7 +145,7 @@ export const Pricing = () => {
                 />
               )}
               
-              <div className={`relative rounded-2xl p-6 sm:p-8 md:p-10 transition-all duration-500 group h-full bg-white dark:bg-gradient-to-br dark:from-green-900 dark:via-green-900 dark:to-green-950 text-green-700 dark:text-white border-2 border-green-200 dark:border-green-800/50 hover:border-green-300 dark:hover:border-green-700 hover:shadow-[0_25px_70px_-15px_rgba(34,197,94,0.25)] dark:hover:shadow-[0_25px_70px_-15px_rgba(0,0,0,0.4)]`}>
+              <div className={`relative rounded-2xl p-6 sm:p-8 md:p-10 transition-all duration-500 group h-full bg-[hsl(250,100%,98%)] dark:bg-gradient-to-br dark:from-[hsl(250,50%,15%)] dark:via-[hsl(250,50%,18%)] dark:to-[hsl(250,50%,20%)] text-[hsl(250,50%,20%)] dark:text-white border-2 border-[hsl(250,40%,92%)] dark:border-[hsl(250,30%,35%)]/50 hover:border-[hsl(270,80%,65%)] dark:hover:border-[hsl(270,80%,65%)] hover:shadow-[0_25px_70px_-15px_rgba(167,139,250,0.25)] dark:hover:shadow-[0_25px_70px_-15px_rgba(0,0,0,0.4)]`}>
                 {/* Top accent line with animation */}
                 <motion.div 
                   className={`absolute top-0 left-0 right-0 h-1 rounded-t-2xl ${
@@ -158,7 +158,7 @@ export const Pricing = () => {
               
                 {plan.badge && (
                   <motion.div 
-                    className="absolute -top-4 right-6 px-4 py-1.5 rounded-full text-xs font-bold shadow-xl flex items-center gap-1.5 bg-green-100 dark:bg-green-600 text-green-800 dark:text-white"
+                    className="absolute -top-4 right-6 px-4 py-1.5 rounded-full text-xs font-bold shadow-xl flex items-center gap-1.5 bg-[hsl(250,100%,98%)] dark:bg-[hsl(270,80%,65%)] text-[hsl(250,50%,20%)] dark:text-white"
                     initial={{ y: -10, opacity: 0 }}
                     whileInView={{ y: 0, opacity: 1 }}
                     transition={{ duration: 0.5, delay: 0.5 }}
@@ -176,14 +176,14 @@ export const Pricing = () => {
               
                 {/* Header */}
                 <div className="mb-6 relative z-10">
-                  <h3 className="text-2xl sm:text-3xl font-bold mb-2 group-hover:scale-105 transition-transform duration-300 text-green-800 dark:text-white">
+                  <h3 className="text-2xl sm:text-3xl font-bold mb-2 group-hover:scale-105 transition-transform duration-300 text-[hsl(250,50%,20%)] dark:text-white">
                     {plan.name}
                   </h3>
                   <div className="flex items-center gap-2">
-                    <p className="text-sm font-medium text-green-600 dark:text-green-200">
+                    <p className="text-sm font-medium text-[hsl(270,80%,65%)] dark:text-[hsl(270,80%,75%)]">
                       {plan.hours}
                     </p>
-                    <span className="px-2 py-0.5 text-xs rounded-full bg-green-100 dark:bg-green-800/50 text-green-700 dark:text-green-200">
+                    <span className="px-2 py-0.5 text-xs rounded-full bg-[hsl(250,100%,98%)] dark:bg-[hsl(250,45%,20%)]/50 text-[hsl(250,50%,20%)] dark:text-white">
                       Data Entry
                     </span>
                   </div>
@@ -193,24 +193,24 @@ export const Pricing = () => {
                 <div className="mb-6 pb-6 border-b border-current/10 relative z-10">
                   <div className="flex items-baseline gap-1">
                     <motion.span 
-                      className="text-5xl sm:text-6xl font-bold tracking-tight text-green-800 dark:text-white"
+                      className="text-5xl sm:text-6xl font-bold tracking-tight text-[hsl(250,50%,20%)] dark:text-white"
                       initial={{ scale: 0.5, opacity: 0 }}
                       whileInView={{ scale: 1, opacity: 1 }}
                       transition={{ type: "spring", duration: 0.8, delay: 0.4 }}
                     >
                       ${plan.price}
                     </motion.span>
-                    <span className="text-base ml-1 text-green-600 dark:text-green-200">
+                    <span className="text-base ml-1 text-[hsl(270,80%,65%)] dark:text-[hsl(270,80%,75%)]">
                       /mo
                     </span>
                   </div>
                   {plan.setupFee > 0 ? (
-                    <p className="text-xs mt-2 text-green-600 dark:text-green-200">
+                    <p className="text-xs mt-2 text-[hsl(270,80%,65%)] dark:text-[hsl(270,80%,75%)]">
                       + ${plan.setupFee} setup fee
                     </p>
                   ) : (
-                    <p className="text-xs mt-2 font-semibold flex items-center gap-1 text-green-700 dark:text-green-300">
-                      <Check className="w-3.5 h-3.5 text-green-700 dark:text-green-300" />
+                    <p className="text-xs mt-2 font-semibold flex items-center gap-1 text-[hsl(250,50%,20%)] dark:text-[hsl(270,80%,85%)]">
+                      <Check className="w-3.5 h-3.5 text-[hsl(250,50%,20%)] dark:text-[hsl(270,80%,85%)]" />
                       No setup fee
                     </p>
                   )}
@@ -226,10 +226,10 @@ export const Pricing = () => {
                       whileInView={{ opacity: 1, x: 0 }}
                       transition={{ delay: 0.5 + fIndex * 0.1 }}
                     >
-                      <div className="flex-shrink-0 w-5 h-5 rounded-full flex items-center justify-center mt-0.5 transition-all duration-300 group-hover:scale-110 bg-green-100 dark:bg-green-800/50 group-hover:bg-green-200 dark:group-hover:bg-green-800/70">
-                        <Check className="w-3 h-3 text-green-700 dark:text-green-300" />
+                      <div className="flex-shrink-0 w-5 h-5 rounded-full flex items-center justify-center mt-0.5 transition-all duration-300 group-hover:scale-110 bg-[hsl(250,100%,98%)] dark:bg-[hsl(250,45%,20%)]/50 group-hover:bg-[hsl(250,90%,97%)] dark:group-hover:bg-[hsl(250,45%,22%)]/70">
+                        <Check className="w-3 h-3 text-[hsl(250,50%,20%)] dark:text-[hsl(270,80%,85%)]" />
                       </div>
-                      <span className="text-sm leading-relaxed text-green-700 dark:text-green-100">
+                      <span className="text-sm leading-relaxed text-card-foreground dark:text-[hsl(270,80%,85%)]">
                         {feature}
                       </span>
                     </motion.li>
@@ -240,7 +240,7 @@ export const Pricing = () => {
                 <Button 
                   size="lg"
                   onClick={() => window.location.href = '/book-meeting'}
-                  className="w-full relative z-10 font-bold text-base py-6 sm:py-7 rounded-xl transition-all duration-300 group/btn overflow-hidden min-h-[44px] bg-gradient-to-br from-green-600 via-green-700 to-green-800 dark:bg-white text-white dark:text-green-900 hover:from-green-500 hover:via-green-600 hover:to-green-700 dark:hover:bg-white/90 hover:scale-105 border-2 border-green-600 dark:border-white"
+                  className="w-full relative z-10 font-bold text-base py-6 sm:py-7 rounded-xl transition-all duration-300 group/btn overflow-hidden min-h-[44px] bg-gradient-to-br from-[hsl(270,80%,65%)] via-[hsl(260,85%,60%)] to-[hsl(220,90%,60%)] text-white hover:from-[hsl(270,85%,70%)] hover:via-[hsl(260,90%,65%)] hover:to-[hsl(220,95%,65%)] hover:scale-105 border-0"
                   aria-label={`Get started with ${plan.name} plan - ${plan.hours} per week at ${Math.round(plan.price * (1 - discount) * vaCount)} per month`}
                 >
                   {/* Button shine effect */}

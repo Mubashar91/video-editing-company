@@ -17,10 +17,10 @@ const Index = () => {
     <main className="min-h-screen overflow-x-hidden">
       <Navbar />
       <Hero />
-      {/* <ValueProposition /> */}
+    
       <HowItWorks />
       <Services />
-      {/* <WhyChooseUs /> */}
+  
       <Pricing />
       <ToolsIntegration />
       <Testimonials />

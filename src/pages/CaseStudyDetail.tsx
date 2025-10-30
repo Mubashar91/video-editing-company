@@ -35,7 +35,7 @@ const CaseStudyDetail = () => {
           {/* Back button */}
           <button
             onClick={() => navigate('/')}
-            className="mb-6 flex items-center gap-2 text-muted-foreground hover:text-gold transition-colors font-medium group"
+            className="mb-6 flex items-center gap-2 bg-gold/10 text-gold hover:bg-gold/20 transition-colors font-medium group px-3 py-2 rounded-md"
           >
             <ArrowLeft className="w-4 h-4 group-hover:-translate-x-1 transition-transform" />
             Back to Home
@@ -181,7 +181,7 @@ const CaseStudyDetail = () => {
                   
                   <button
                     onClick={() => navigate('/')}
-                    className="w-full sm:w-auto px-8 py-4 bg-card border-2 border-gold/30 hover:border-gold/50 text-foreground font-semibold rounded-xl transition-all duration-300 hover:bg-gold/5"
+                    className="w-full sm:w-auto px-8 py-4 bg-gold/10 text-gold border-2 border-gold/30 hover:bg-gold/20 font-semibold rounded-xl transition-all duration-300"
                   >
                     View All Case Studies
                   </button>

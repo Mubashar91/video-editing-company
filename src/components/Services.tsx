@@ -1,43 +1,43 @@
-import { Search, FileText, Settings, BarChart3, Target, Link, TrendingUp } from "lucide-react";
+import { Palette, Layout, Package, Smartphone, Video, Sparkles } from "lucide-react";
 import { motion, useInView, useSpring, useTransform } from "framer-motion";
 import { useRef } from "react";
 
 const services = [
   {
-    icon: FileText,
-    title: "Form & Document Processing",
-    description: "Accurate entry from PDFs, scans, and forms (OCR-assisted) with double-check QA for zero missing fields",
-    benefit: "99.9% accuracy"
+    icon: Palette,
+    title: "Brand Identity Design",
+    description: "Complete brand systems including logos, color palettes, typography, and brand guidelines that make you unforgettable",
+    benefit: "Stand out boldly"
   },
   {
-    icon: Settings,
-    title: "Data Cleaning & Normalization",
-    description: "De-duplication, formatting, standardization, and validation rules to keep your datasets consistent",
-    benefit: "Clean, reliable data"
+    icon: Layout,
+    title: "UI/UX Design",
+    description: "User-centered interfaces and experiences that are beautiful, intuitive, and conversion-focused for web and mobile",
+    benefit: "Delight users"
   },
   {
-    icon: BarChart3,
-    title: "Catalog & Listing Management",
-    description: "Product attributes, SKUs, images, pricing, and bulk updates for eCommerce, marketplaces, and CMS",
-    benefit: "Faster updates"
+    icon: Package,
+    title: "Marketing Materials",
+    description: "Eye-catching brochures, flyers, social media graphics, presentations, and print designs that drive engagement",
+    benefit: "Boost engagement"
   },
   {
-    icon: Search,
-    title: "Web Research & Data Collection",
-    description: "Verified lead lists and datasets compiled from trusted sources, enriched with the fields you need",
-    benefit: "Quality leads/data"
+    icon: Smartphone,
+    title: "Digital Design",
+    description: "Website designs, landing pages, email templates, and digital ads optimized for modern devices and platforms",
+    benefit: "Convert visitors"
   },
   {
-    icon: Link,
-    title: "CRM/Sheet Migration",
-    description: "Import/export, schema mapping, and safe migration between spreadsheets, CRMs, and databases",
-    benefit: "Seamless migration"
+    icon: Video,
+    title: "Motion Graphics",
+    description: "Animated logos, explainer videos, social media animations, and motion design that brings your brand to life",
+    benefit: "Captivate audiences"
   },
   {
-    icon: Target,
-    title: "QA & Ongoing Maintenance",
-    description: "Routine audits, spot checks, and SLAs to keep records accurate as your data changes over time",
-    benefit: "Zero drift"
+    icon: Sparkles,
+    title: "Creative Consulting",
+    description: "Strategic design direction, brand audits, creative workshops, and ongoing design support for your team",
+    benefit: "Expert guidance"
   }
 ];
 
@@ -70,14 +70,14 @@ export const Services = () => {
           viewport={{ once: true }}
           transition={{ duration: 0.8, delay: 0.2 }}
         >
-          <span className="inline-block px-3 py-1.5 sm:px-4 sm:py-2 md:px-5 md:py-2.5 bg-gradient-to-br from-green-600 via-green-700 to-green-800 text-white text-xs sm:text-sm md:text-base font-semibold rounded-full mb-3 sm:mb-4">
-            Our Data Entry Services
+          <span className="inline-block px-3 py-1.5 sm:px-4 sm:py-2 md:px-5 md:py-2.5 bg-gradient-to-br from-[hsl(270,80%,65%)] via-[hsl(260,85%,60%)] to-[hsl(220,90%,60%)] text-white text-xs sm:text-sm md:text-base font-semibold rounded-full mb-3 sm:mb-4">
+            Our Design Services
           </span>
-          <h2 className="text-3xl sm:text-4xl md:text-4xl lg:text-5xl xl:text-6xl font-bold mb-3 sm:mb-4 md:mb-5 px-2 text-green-800 dark:text-foreground">
-            How We <span className="text-green-600 dark:text-gold">Power</span> Your Data Ops
+          <h2 className="text-3xl sm:text-4xl md:text-4xl lg:text-5xl xl:text-6xl font-bold mb-3 sm:mb-4 md:mb-5 px-2 text-[hsl(250,50%,20%)] dark:text-foreground">
+            Creative Services That <span className="bg-gradient-to-r from-[hsl(270,80%,65%)] to-[hsl(220,90%,60%)] bg-clip-text text-transparent">Elevate</span> Your Brand
           </h2>
           <p className="text-base sm:text-lg md:text-lg lg:text-xl text-muted-foreground max-w-3xl leading-relaxed px-2">
-            End‑to‑end data entry operations—intake, cleaning, validation, and delivery—so your team can focus on growth, not spreadsheets.
+            From brand identity to digital experiences—comprehensive design solutions that make your brand memorable and drive real results.
           </p>
         </motion.div>
 
@@ -85,7 +85,7 @@ export const Services = () => {
           {services.map((service, index) => (
             <motion.div 
               key={index}
-              className="relative bg-white dark:bg-gradient-to-br dark:from-green-900 dark:via-green-900 dark:to-green-950 text-green-700 dark:text-white border-2 border-green-200 dark:border-green-800/50 p-5 sm:p-6 md:p-7 lg:p-9 xl:p-10 rounded-xl sm:rounded-2xl hover:border-green-300 dark:hover:border-green-700 hover:shadow-[0_25px_80px_-20px_rgba(34,197,94,0.25)] dark:hover:shadow-[0_25px_80px_-20px_rgba(0,0,0,0.4)] transition-all duration-700 group overflow-hidden"
+              className="relative bg-[hsl(250,100%,98%)] dark:bg-gradient-to-br dark:from-[hsl(250,50%,15%)] dark:via-[hsl(250,50%,18%)] dark:to-[hsl(250,50%,20%)] text-[hsl(250,50%,20%)] dark:text-white border-2 border-[hsl(250,40%,92%)] dark:border-[hsl(250,30%,35%)]/50 p-5 sm:p-6 md:p-7 lg:p-9 xl:p-10 rounded-xl sm:rounded-2xl hover:border-[hsl(270,80%,65%)] dark:hover:border-[hsl(270,80%,65%)] hover:shadow-[0_25px_80px_-20px_rgba(167,139,250,0.25)] dark:hover:shadow-[0_25px_80px_-20px_rgba(0,0,0,0.4)] transition-all duration-700 group overflow-hidden"
               initial={{ opacity: 0, y: 60, scale: 0.9 }}
               animate={isInView ? { opacity: 1, y: 0, scale: 1 } : { opacity: 0, y: 60, scale: 0.9 }}
               transition={{ 
@@ -108,33 +108,33 @@ export const Services = () => {
               }}
             >
               {/* Hover gradient overlay */}
-              <div className="absolute inset-0 bg-gradient-to-br from-green-100/30 dark:from-green-800/30 via-green-50/20 dark:via-green-900/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-700" />
+              <div className="absolute inset-0 bg-gradient-to-br from-[hsl(270,80%,95%)]/30 dark:from-[hsl(270,80%,65%)]/30 via-[hsl(250,100%,98%)]/20 dark:via-[hsl(250,45%,20%)]/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-700" />
               
               <div className="flex flex-col sm:flex-row md:flex-col lg:flex-row items-start gap-4 sm:gap-5 md:gap-5 lg:gap-6 relative z-10">
                 <motion.div 
-                  className="flex-shrink-0 w-14 h-14 sm:w-16 sm:h-16 md:w-14 md:h-14 lg:w-16 lg:h-16 rounded-lg sm:rounded-xl bg-gradient-to-br from-green-600 via-green-700 to-green-800 text-white ring-1 ring-green-600/30 flex items-center justify-center group-hover:scale-110 group-hover:rotate-3 transition-all duration-500 shadow-[0_18px_40px_-12px_rgba(34,197,94,0.6)]"
+                  className="flex-shrink-0 w-14 h-14 sm:w-16 sm:h-16 md:w-14 md:h-14 lg:w-16 lg:h-16 rounded-lg sm:rounded-xl bg-gradient-to-br from-[hsl(270,80%,65%)] via-[hsl(260,85%,60%)] to-[hsl(220,90%,60%)] text-white ring-1 ring-[hsl(270,80%,65%)]/30 flex items-center justify-center group-hover:scale-110 group-hover:rotate-3 transition-all duration-500 shadow-[0_18px_40px_-12px_rgba(167,139,250,0.6)]"
                   whileHover={{ rotate: 360 }}
                   transition={{ duration: 0.6 }}
                 >
                   <service.icon className="w-7 h-7 sm:w-8 sm:h-8 md:w-7 md:h-7 lg:w-8 lg:h-8" />
                 </motion.div>
                 <div className="flex-1 w-full">
-                  <h3 className="text-xl sm:text-2xl md:text-xl lg:text-2xl font-bold mb-2 sm:mb-3 md:mb-3 text-green-800 dark:text-white transition-colors duration-300">
+                  <h3 className="text-xl sm:text-2xl md:text-xl lg:text-2xl font-bold mb-2 sm:mb-3 md:mb-3 text-[hsl(250,50%,20%)] dark:text-white transition-colors duration-300">
                     {service.title}
                   </h3>
-                  <p className="text-sm sm:text-base md:text-sm lg:text-base text-green-700 dark:text-green-100 mb-3 sm:mb-4 md:mb-4 leading-relaxed">
+                  <p className="text-sm sm:text-base md:text-sm lg:text-base text-[hsl(250,30%,50%)] dark:text-[hsl(270,80%,85%)] mb-3 sm:mb-4 md:mb-4 leading-relaxed">
                     {service.description}
                   </p>
-                  <div className="inline-flex items-center px-3 py-1.5 sm:px-4 sm:py-2 md:px-3.5 md:py-1.5 lg:px-4 lg:py-2 bg-green-100 dark:bg-green-800/50 border border-green-300 dark:border-green-700 rounded-full text-green-700 dark:text-green-200 text-xs sm:text-sm md:text-xs lg:text-sm font-semibold group-hover:bg-green-600 group-hover:text-white dark:group-hover:bg-white dark:group-hover:text-gray-900 group-hover:border-green-600 dark:group-hover:border-white transition-all duration-500">
-                    <TrendingUp className="w-3.5 h-3.5 sm:w-4 sm:h-4 md:w-3.5 md:h-3.5 lg:w-4 lg:h-4 mr-1.5 sm:mr-2 md:mr-1.5 lg:mr-2" />
+                  <div className="inline-flex items-center px-3 py-1.5 sm:px-4 sm:py-2 md:px-3.5 md:py-1.5 lg:px-4 lg:py-2 bg-[hsl(250,100%,98%)] dark:bg-[hsl(250,45%,20%)]/50 border border-[hsl(270,80%,65%)]/30 dark:border-[hsl(270,80%,65%)]/50 rounded-full text-[hsl(270,80%,65%)] dark:text-[hsl(270,80%,75%)] text-xs sm:text-sm md:text-xs lg:text-sm font-semibold group-hover:bg-gradient-to-r group-hover:from-[hsl(270,80%,65%)] group-hover:to-[hsl(220,90%,60%)] group-hover:text-white group-hover:border-transparent transition-all duration-500">
+                    <Sparkles className="w-3.5 h-3.5 sm:w-4 sm:h-4 md:w-3.5 md:h-3.5 lg:w-4 lg:h-4 mr-1.5 sm:mr-2 md:mr-1.5 lg:mr-2" />
                     <span className="leading-none">{service.benefit}</span>
                   </div>
                 </div>
               </div>
               
               {/* Decorative corner accent */}
-              <div className="absolute top-0 right-0 w-12 h-12 sm:w-16 sm:h-16 md:w-16 md:h-16 lg:w-20 lg:h-20 border-t-2 border-r-2 border-green-700/0 group-hover:border-green-500/50 rounded-tr-xl sm:rounded-tr-2xl transition-all duration-700" />
-              <div className="absolute bottom-0 left-0 w-12 h-12 sm:w-16 sm:h-16 md:w-16 md:h-16 lg:w-20 lg:h-20 border-b-2 border-l-2 border-green-700/0 group-hover:border-green-500/50 rounded-bl-xl sm:rounded-bl-2xl transition-all duration-700" />
+              <div className="absolute top-0 right-0 w-12 h-12 sm:w-16 sm:h-16 md:w-16 md:h-16 lg:w-20 lg:h-20 border-t-2 border-r-2 border-[hsl(270,80%,65%)]/0 group-hover:border-[hsl(270,80%,65%)]/50 rounded-tr-xl sm:rounded-tr-2xl transition-all duration-700" />
+              <div className="absolute bottom-0 left-0 w-12 h-12 sm:w-16 sm:h-16 md:w-16 md:h-16 lg:w-20 lg:h-20 border-b-2 border-l-2 border-[hsl(270,80%,65%)]/0 group-hover:border-[hsl(270,80%,65%)]/50 rounded-bl-xl sm:rounded-bl-2xl transition-all duration-700" />
             </motion.div>
           ))}
         </div>

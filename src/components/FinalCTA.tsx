@@ -5,7 +5,7 @@ import { motion } from "framer-motion";
 export const FinalCTA = () => {
   return (
     <motion.section 
-      className="relative overflow-hidden py-12 sm:py-16 md:py-20 lg:py-24 xl:py-28 bg-gradient-to-br from-green-900 via-green-800 to-green-950 z-60"
+      className="relative overflow-hidden py-12 sm:py-16 md:py-20 lg:py-24 xl:py-28 bg-gradient-to-br from-[hsl(250,50%,16%)] via-[hsl(250,50%,22%)] to-[hsl(250,50%,26%)] z-60"
       initial={{ opacity: 0 }}
       whileInView={{ opacity: 1 }}
       viewport={{ once: true, margin: "-50px" }}
@@ -28,7 +28,7 @@ export const FinalCTA = () => {
         <div className="absolute inset-0 pointer-events-none opacity-10 bg-[repeating-linear-gradient(45deg,rgba(255,255,255,0.08)_0px,rgba(255,255,255,0.08)_2px,transparent_2px,transparent_8px)]" />
         {/* Animated gradient orbs */}
         <motion.div 
-          className="absolute -top-20 -right-20 w-40 h-40 xs:w-48 xs:h-48 sm:w-56 sm:h-56 md:w-64 md:h-64 lg:w-80 lg:h-80 bg-emerald-300/20 rounded-full mix-blend-overlay filter blur-3xl"
+          className="absolute -top-20 -right-20 w-40 h-40 xs:w-48 xs:h-48 sm:w-56 sm:h-56 md:w-64 md:h-64 lg:w-80 lg:h-80 bg-[hsl(270,80%,65%)]/20 rounded-full mix-blend-overlay filter blur-3xl"
           animate={{ 
             scale: [1, 1.2, 1],
             opacity: [0.3, 0.5, 0.3]
@@ -40,7 +40,7 @@ export const FinalCTA = () => {
           }}
         />
         <motion.div 
-          className="absolute -bottom-16 -left-16 w-32 h-32 xs:w-36 xs:h-36 sm:w-40 sm:h-40 md:w-48 md:h-48 lg:w-60 lg:h-60 bg-emerald-400/25 rounded-full mix-blend-overlay filter blur-3xl"
+          className="absolute -bottom-16 -left-16 w-32 h-32 xs:w-36 xs:h-36 sm:w-40 sm:h-40 md:w-48 md:h-48 lg:w-60 lg:h-60 bg-[hsl(220,90%,60%)]/25 rounded-full mix-blend-overlay filter blur-3xl"
           animate={{ 
             scale: [1.2, 1, 1.2],
             opacity: [0.4, 0.2, 0.4]
@@ -84,7 +84,7 @@ export const FinalCTA = () => {
             viewport={{ once: true }}
             transition={{ delay: 0.3, type: "spring", stiffness: 120 }}
           >
-            <div className="px-5 py-2.5 sm:px-6 sm:py-3 bg-white/25 backdrop-blur-lg rounded-full text-sm sm:text-base font-bold text-white flex items-center gap-2 border border-white/40 shadow-xl hover:scale-105 transition-transform duration-300">
+            <div className="px-5 py-2.5 sm:px-6 sm:py-3 bg-white/20 backdrop-blur-lg rounded-full text-sm sm:text-base font-bold text-white flex items-center gap-2 border border-white/35 shadow-xl hover:scale-105 transition-transform duration-300">
               <motion.div
                 animate={{ rotate: [0, 360] }}
                 transition={{ duration: 3, repeat: Infinity, ease: "linear" }}
@@ -92,7 +92,7 @@ export const FinalCTA = () => {
                 <Sparkles className="w-4 h-4 sm:w-5 sm:h-5" />
               </motion.div>
               <span className="whitespace-nowrap">Start Your Data Entry Today</span>
-              <div className="w-1.5 h-1.5 xs:w-2 xs:h-2 rounded-full bg-green-400 animate-pulse"></div>
+              <div className="w-1.5 h-1.5 xs:w-2 xs:h-2 rounded-full bg-[hsl(270,80%,65%)] animate-pulse"></div>
             </div>
           </motion.div>
 
@@ -106,7 +106,7 @@ export const FinalCTA = () => {
           >
             <span className="block drop-shadow-lg">Ready for Clean,</span>
             <span className="relative inline-block mt-2 sm:mt-3">
-              <span className="relative z-10 bg-gradient-to-r from-white via-emerald-50 to-white bg-clip-text text-transparent drop-shadow-2xl">
+              <span className="relative z-10 bg-gradient-to-r from-white via-white/70 to-white bg-clip-text text-transparent drop-shadow-2xl">
                 Accurate Data?
               </span>
               <motion.span 
@@ -163,10 +163,10 @@ export const FinalCTA = () => {
             <Button 
               size="lg"
               onClick={() => window.location.href = '/book-meeting'}
-              className="bg-white text-green-900 hover:bg-white/95 hover:scale-[1.08] active:scale-[1.02] group px-8 sm:px-12 py-6 sm:py-8 text-base sm:text-lg font-extrabold rounded-2xl shadow-[0_20px_60px_-15px_rgba(0,0,0,0.4)] hover:shadow-[0_30px_80px_-15px_rgba(0,0,0,0.5)] transition-all duration-300 border-2 border-white relative overflow-hidden cursor-pointer w-full sm:w-auto"
+              className="bg-gradient-to-r from-[hsl(270,80%,65%)] to-[hsl(220,90%,60%)] text-white hover:from-[hsl(270,85%,70%)] hover:to-[hsl(220,95%,65%)] hover:scale-[1.08] active:scale-[1.02] group px-8 sm:px-12 py-6 sm:py-8 text-base sm:text-lg font-extrabold rounded-2xl shadow-[0_20px_60px_-15px_hsl(270,80%,65%/0.35)] hover:shadow-[0_30px_80px_-15px_hsl(270,80%,65%/0.45)] transition-all duration-300 border-0 relative overflow-hidden cursor-pointer w-full sm:w-auto"
             >
-              <div className="absolute inset-0 bg-gradient-to-r from-transparent via-green-200/20 to-transparent -skew-x-12 transform translate-x-[-200%] group-hover:translate-x-[200%] transition-transform duration-700" />
-              <div className="absolute inset-0 bg-gradient-to-r from-green-100/0 via-green-100/10 to-green-100/0 animate-pulse" />
+              <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/15 to-transparent -skew-x-12 transform translate-x-[-200%] group-hover:translate-x-[200%] transition-transform duration-700" />
+              <div className="absolute inset-0 bg-gradient-to-r from-white/0 via-white/10 to-white/0 animate-pulse" />
               <span className="relative flex items-center gap-3">
                 <span>Get Free Sample</span>
                 <ArrowRight className="h-5 w-5 sm:h-6 sm:w-6 group-hover:translate-x-2 transition-transform duration-300" />
@@ -177,11 +177,11 @@ export const FinalCTA = () => {
               variant="outline"
               size="lg"
               onClick={() => window.open('https://wa.me/YOUR_WHATSAPP_NUMBER', '_blank')}
-              className="bg-white/10 border-3 border-white text-white hover:bg-background hover:text-foreground hover:scale-[1.08] active:scale-[1.02] px-6 sm:px-10 py-6 sm:py-8 text-base sm:text-lg font-bold rounded-2xl backdrop-blur-lg transition-all duration-300 group relative overflow-hidden cursor-pointer w-full sm:w-auto shadow-lg hover:shadow-2xl dark:hover:bg-primary dark:hover:text-primary-foreground"
+              className="bg-white/10 border border-white/40 text-white hover:bg-white/20 hover:text-white hover:scale-[1.08] active:scale-[1.02] px-6 sm:px-10 py-6 sm:py-8 text-base sm:text-lg font-bold rounded-2xl backdrop-blur-lg transition-all duration-300 group relative overflow-hidden cursor-pointer w-full sm:w-auto shadow-lg hover:shadow-2xl"
             >
               <div className="absolute inset-0 bg-gradient-to-r from-white/0 via-white/20 to-white/0 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
               <span className="relative flex items-center gap-3">
-                <MessageCircle className="h-5 w-5 sm:h-6 sm:w-6 group-hover:rotate-12 transition-transform duration-300" />
+                <MessageCircle className="h-5 w-5 sm:h-6 sm:w-6 text-[hsl(270,80%,75%)] group-hover:rotate-12 transition-transform duration-300" />
                 <span>Quick WhatsApp Chat</span>
               </span>
             </Button>
@@ -196,10 +196,10 @@ export const FinalCTA = () => {
             transition={{ duration: 0.7, delay: 0.35 }}
           >
             {[
-              { icon: FileText, value: "5M+", label: "Records Processed" },
-              { icon: CheckCircle2, value: "99.9%", label: "Accuracy (QA)" },
-              { icon: Clock, value: "24–72h", label: "Avg. Turnaround" },
-              { icon: Award, value: "98%", label: "On‑time Delivery" }
+              { icon: FileText, value: "5M+", label: "Projects Delivered" },
+              { icon: CheckCircle2, value: "98%", label: "Client Satisfaction" },
+              { icon: Clock, value: "3–7d", label: "Avg. Turnaround" },
+              { icon: Award, value: "50+", label: "Awards/Nominations" }
             ].map((stat, index) => (
               <motion.div
                 key={stat.label}
@@ -209,7 +209,7 @@ export const FinalCTA = () => {
                 whileHover={{ scale: 1.05, y: -5 }}
                 className="bg-white/15 backdrop-blur-lg border border-white/30 rounded-2xl p-4 sm:p-6 hover:bg-white/25 transition-all duration-300 group"
               >
-                <stat.icon className="w-6 h-6 sm:w-8 sm:h-8 text-white mb-2 mx-auto group-hover:scale-110 transition-transform duration-300" />
+                <stat.icon className="w-6 h-6 sm:w-8 sm:h-8 text-[hsl(270,80%,75%)] mb-2 mx-auto group-hover:scale-110 transition-transform duration-300" />
                 <div className="text-2xl sm:text-3xl font-bold text-white mb-1">{stat.value}</div>
                 <div className="text-xs sm:text-sm text-white/80">{stat.label}</div>
               </motion.div>
@@ -225,8 +225,8 @@ export const FinalCTA = () => {
             transition={{ duration: 0.7, delay: 0.4 }}
           >
             <div className="flex items-center justify-center gap-3 text-white/90 bg-white/10 backdrop-blur-md rounded-xl p-4 border border-white/20 hover:bg-white/15 transition-all duration-300">
-              <div className="p-2 bg-green-400/20 rounded-lg">
-                <Clock className="w-5 h-5 text-green-400 flex-shrink-0" />
+              <div className="p-2 bg-[hsl(270,80%,65%)]/20 rounded-lg">
+                <Clock className="w-5 h-5 text-[hsl(270,80%,75%)] flex-shrink-0" />
               </div>
               <div className="text-left">
                 <div className="font-bold text-white text-base">15 min</div>
@@ -235,9 +235,9 @@ export const FinalCTA = () => {
             </div>
             
             <div className="flex items-center justify-center gap-3 text-white/90 bg-white/10 backdrop-blur-md rounded-xl p-4 border border-white/20 hover:bg-white/15 transition-all duration-300">
-              <div className="p-2 bg-green-400/20 rounded-lg relative">
-                <div className="w-5 h-5 rounded-full bg-green-400 animate-pulse" />
-                <div className="absolute inset-0 rounded-full bg-green-400 animate-ping opacity-75" />
+              <div className="p-2 bg-[hsl(220,90%,60%)]/20 rounded-lg relative">
+                <div className="w-5 h-5 rounded-full bg-[hsl(220,90%,60%)] animate-pulse" />
+                <div className="absolute inset-0 rounded-full bg-[hsl(220,90%,60%)] animate-ping opacity-75" />
               </div>
               <div className="text-left">
                 <div className="font-bold text-white text-base">2 hours</div>
@@ -246,8 +246,8 @@ export const FinalCTA = () => {
             </div>
             
             <div className="flex items-center justify-center gap-3 text-white/90 bg-white/10 backdrop-blur-md rounded-xl p-4 border border-white/20 hover:bg-white/15 transition-all duration-300">
-              <div className="p-2 bg-green-400/20 rounded-lg">
-                <CheckCircle2 className="w-5 h-5 text-green-400 flex-shrink-0" />
+              <div className="p-2 bg-[hsl(270,80%,65%)]/20 rounded-lg">
+                <CheckCircle2 className="w-5 h-5 text-[hsl(270,80%,75%)] flex-shrink-0" />
               </div>
               <div className="text-left">
                 <div className="font-bold text-white text-base">No commitment</div>
@@ -264,7 +264,7 @@ export const FinalCTA = () => {
             transition={{ duration: 0.6, delay: 0.5 }}
           >
             <span className="flex items-center justify-center gap-2 flex-wrap">
-              <CheckCircle2 className="w-4 h-4 text-green-400" />
+              <CheckCircle2 className="w-4 h-4 text-[hsl(270,80%,75%)]" />
               Join 500+ teams shipping clean datasets with our proven data entry workflows
             </span>
           </motion.p>

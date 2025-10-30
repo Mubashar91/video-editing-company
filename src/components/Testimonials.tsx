@@ -7,21 +7,21 @@ const testimonials = [
     name: "Emma Rodriguez",
     company: "Luxe Beauty Co.",
     role: "Founder",
-    content: "Our organic traffic increased 400% in 8 months. We went from page 3 to ranking #1 for our main keywords. The ROI from SEO has been incredible.",
+    content: "Our rebrand feels premium and consistent across web, packaging, and socials. The guidelines make every new asset easy to produce.",
     rating: 5
   },
   {
     name: "David Chen",
     company: "Peak Performance Coaching",
     role: "CEO",
-    content: "Local SEO was a game changer. We now dominate local search and get 15+ qualified leads per week from Google. Best investment we've made.",
+    content: "The UI/UX refresh boosted conversions and made mobile actually delightful. We’re getting more qualified inquiries every week.",
     rating: 5
   },
   {
     name: "Sophie Martens",
     company: "Urban Eats",
     role: "Marketing Lead",
-    content: "Their technical SEO audit fixed issues we didn't even know existed. Site speed improved 85% and we're ranking for 300+ keywords now.",
+    content: "Motion templates and a social kit 3×'d our output. Everything looks on‑brand—and it performs.",
     rating: 5
   }
 ];
@@ -44,11 +44,11 @@ export const Testimonials = () => {
           viewport={{ once: true }}
           transition={{ duration: 0.6, ease: "easeOut" }}
         >
-          <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-3 sm:mb-4 px-2 text-green-800 dark:text-foreground">
-            Trusted by <span className="text-green-600 dark:text-gold">Brands That Rank</span>
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-3 sm:mb-4 px-2 text-[hsl(250,50%,20%)] dark:text-foreground">
+            Trusted by <span className="bg-gradient-to-r from-[hsl(270,80%,65%)] to-[hsl(220,90%,60%)] bg-clip-text text-transparent">Brands That Create</span>
           </h2>
           <p className="text-base sm:text-lg md:text-xl text-muted-foreground max-w-2xl px-2">
-            Real SEO results from real businesses who partnered with us.
+            Real design outcomes—premium branding, conversion‑focused UI/UX, and scroll‑stopping content.
           </p>
         </motion.div>
 
@@ -56,7 +56,7 @@ export const Testimonials = () => {
           {testimonials.map((testimonial, index) => (
             <motion.div 
               key={index}
-              className="bg-white dark:bg-gradient-to-br dark:from-green-900 dark:via-green-900 dark:to-green-950 border-2 border-green-200 dark:border-green-800/50 rounded-lg sm:rounded-xl p-5 sm:p-6 md:p-8 hover:border-green-300 dark:hover:border-green-700 hover:shadow-[0_20px_60px_-15px_rgba(34,197,94,0.25)] dark:hover:shadow-[0_20px_60px_-15px_rgba(0,0,0,0.4)] transition-all duration-300"
+              className="bg-[hsl(250,100%,98%)] dark:bg-gradient-to-br dark:from-[hsl(250,50%,15%)] dark:via-[hsl(250,50%,18%)] dark:to-[hsl(250,50%,20%)] border-2 border-[hsl(250,40%,92%)] dark:border-[hsl(250,30%,35%)]/50 rounded-lg sm:rounded-xl p-5 sm:p-6 md:p-8 hover:border-[hsl(270,80%,65%)] dark:hover:border-[hsl(270,80%,65%)] hover:shadow-[0_20px_60px_-15px_rgba(167,139,250,0.25)] dark:hover:shadow-[0_20px_60px_-15px_rgba(0,0,0,0.4)] transition-all duration-300"
               initial={{ opacity: 0, y: 50 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
@@ -68,37 +68,37 @@ export const Testimonials = () => {
                 ))}
               </div>
               
-              <p className="text-sm sm:text-base text-green-700 dark:text-green-100 mb-4 sm:mb-5 md:mb-6 leading-relaxed">
+              <p className="text-sm sm:text-base text-card-foreground dark:text-[hsl(270,80%,85%)] mb-4 sm:mb-5 md:mb-6 leading-relaxed">
                 "{testimonial.content}"
               </p>
               
-              <div className="border-t border-green-200 dark:border-green-800/50 pt-3 sm:pt-4">
-                <p className="text-sm sm:text-base font-bold text-green-800 dark:text-white">{testimonial.name}</p>
-                <p className="text-xs sm:text-sm text-green-600 dark:text-green-300">{testimonial.role}</p>
-                <p className="text-xs sm:text-sm text-green-600 dark:text-green-200">{testimonial.company}</p>
+              <div className="border-t border-[hsl(250,40%,92%)] dark:border-[hsl(250,30%,35%)]/50 pt-3 sm:pt-4">
+                <p className="text-sm sm:text-base font-bold text-[hsl(250,50%,20%)] dark:text-white">{testimonial.name}</p>
+                <p className="text-xs sm:text-sm text-[hsl(270,80%,65%)] dark:text-[hsl(270,80%,75%)]">{testimonial.role}</p>
+                <p className="text-xs sm:text-sm text-[hsl(220,90%,60%)] dark:text-[hsl(270,80%,85%)]">{testimonial.company}</p>
               </div>
             </motion.div>
           ))}
         </div>
 
         <motion.div 
-          className="bg-white dark:bg-gradient-to-br dark:from-green-900 dark:via-green-900 dark:to-green-950 border-2 border-green-200 dark:border-green-800/50 rounded-xl sm:rounded-2xl p-6 sm:p-8 md:p-10 lg:p-12 max-w-5xl mx-auto hover:border-green-300 dark:hover:border-green-700 hover:shadow-[0_20px_60px_-15px_rgba(34,197,94,0.25)] dark:hover:shadow-[0_20px_60px_-15px_rgba(0,0,0,0.4)] transition-all duration-300"
+          className="bg-[hsl(250,100%,98%)] dark:bg-gradient-to-br dark:from-[hsl(250,50%,15%)] dark:via-[hsl(250,50%,18%)] dark:to-[hsl(250,50%,20%)] border-2 border-[hsl(250,40%,92%)] dark:border-[hsl(250,30%,35%)]/50 rounded-xl sm:rounded-2xl p-6 sm:p-8 md:p-10 lg:p-12 max-w-5xl mx-auto hover:border-[hsl(270,80%,65%)] dark:hover:border-[hsl(270,80%,65%)] hover:shadow-[0_20px_60px_-15px_rgba(167,139,250,0.25)] dark:hover:shadow-[0_20px_60px_-15px_rgba(0,0,0,0.4)] transition-all duration-300"
           initial={{ opacity: 0, y: 50 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6, delay: 0.4, ease: "easeOut" }}
         >
           <div className="text-left">
-            <span className="inline-block px-3 py-1 bg-green-100 dark:bg-green-800/50 text-green-700 dark:text-green-300 text-xs sm:text-sm font-semibold rounded-full mb-3 sm:mb-4">
+            <span className="inline-block px-3 py-1 bg-[hsl(250,100%,98%)] dark:bg-[hsl(250,45%,20%)]/50 text-[hsl(270,80%,65%)] dark:text-[hsl(270,80%,75%)] text-xs sm:text-sm font-semibold rounded-full mb-3 sm:mb-4">
               Success Story
             </span>
-            <h3 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-3 sm:mb-4 text-green-800 dark:text-white">
-              Case Study: <span className="text-green-600 dark:text-green-300">450% Organic Traffic Growth in 6 Months</span>
+            <h3 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-3 sm:mb-4 text-[hsl(250,50%,20%)] dark:text-white">
+              Case Study: <span className="bg-gradient-to-r from-[hsl(270,80%,65%)] to-[hsl(220,90%,60%)] bg-clip-text text-transparent">450% Organic Traffic Growth in 6 Months</span>
             </h3>
-            <p className="text-sm sm:text-base md:text-lg text-green-700 dark:text-green-100 mb-5 sm:mb-6 leading-relaxed max-w-3xl">
+            <p className="text-sm sm:text-base md:text-lg text-[hsl(250,30%,50%)] dark:text-[hsl(270,80%,85%)] mb-5 sm:mb-6 leading-relaxed max-w-3xl">
               See how an e-commerce store went from 2K to 11K monthly organic visitors and turned SEO into their #1 revenue channel.
             </p>
-            <Button size="lg" className="w-full sm:w-auto text-sm sm:text-base px-6 sm:px-8 py-3 sm:py-4 bg-white text-green-900 hover:bg-white/90 transition-all duration-300 hover:scale-105 font-semibold">
+            <Button size="lg" className="w-full sm:w-auto text-sm sm:text-base px-6 sm:px-8 py-3 sm:py-4 bg-gradient-to-r from-[hsl(270,80%,65%)] to-[hsl(220,90%,60%)] text-white hover:from-[hsl(270,85%,70%)] hover:to-[hsl(220,95%,65%)] transition-all duration-300 hover:scale-105 font-semibold border-0">
               View Full Case Study
             </Button>
           </div>
