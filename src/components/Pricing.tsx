@@ -104,13 +104,17 @@ export const Pricing = () => {
           transition={{ duration: 0.8, delay: 0.2 }}
         >
           <motion.span 
-            className="inline-block px-3 py-1.5 sm:px-4 sm:py-2 bg-gradient-to-br from-[hsl(var(--gold))] via-[hsl(var(--brand-blue))] to-[hsl(var(--gold))] text-white text-xs sm:text-sm font-bold rounded-full mb-3 sm:mb-4 shadow-md"
+            className="inline-block px-3 py-1.5 sm:px-4 sm:py-2 bg-gradient-to-br from-[hsl(var(--gold))] via-[hsl(var(--brand-blue))] to-[hsl(var(--gold))] text-white text-xs sm:text-sm font-bold rounded-full mb-3 sm:mb-4 shadow-[0_8px_24px_-6px_rgba(59,130,246,0.4)] border border-white/20 backdrop-blur-sm relative overflow-hidden"
             whileHover={{ scale: 1.05 }}
           >
-            Transparent Pricing
+            <span className="absolute inset-0 bg-gradient-to-r from-white/0 via-white/20 to-white/0 opacity-50"></span>
+            <span className="relative z-10">Transparent Pricing</span>
           </motion.span>
-          <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-3 sm:mb-4 text-[hsl(222,47%,20%)] dark:text-foreground leading-tight">
-            Ad Campaign <span className="bg-gradient-to-r from-[hsl(var(--gold))] to-[hsl(var(--brand-blue))] bg-clip-text text-transparent">Packages</span>
+          <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-3 sm:mb-4 text-[hsl(222,47%,20%)] dark:text-white leading-tight tracking-tight">
+            Ad Campaign <span className="relative inline-block">
+              <span className="bg-gradient-to-r from-[hsl(var(--gold))] via-[hsl(var(--brand-blue))] to-[hsl(var(--gold))] bg-clip-text text-transparent bg-[length:200%_100%]">Packages</span>
+              <span className="absolute -bottom-1 left-0 right-0 h-0.5 bg-gradient-to-r from-transparent via-[hsl(var(--gold))]/40 to-transparent"></span>
+            </span>
           </h2>
           <p className="text-base sm:text-lg md:text-xl text-muted-foreground max-w-2xl leading-relaxed">
             Choose a plan that fits your channels and goals. Scale budgets only when unit economics hold. No hidden fees.
@@ -125,10 +129,11 @@ export const Pricing = () => {
           viewport={{ once: true }}
           transition={{ duration: 0.6, delay: 0.3 }}
         >
-          <div className="relative overflow-hidden rounded-2xl bg-gradient-to-r from-[hsl(217,91%,60%)] via-[hsl(200,95%,55%)] to-[hsl(187,92%,47%)] p-[2px]">
-            <div className="relative bg-card dark:bg-background rounded-2xl p-6 sm:p-8 md:p-10">
+          <div className="relative overflow-hidden rounded-2xl bg-gradient-to-r from-[hsl(217,91%,60%)] via-[hsl(200,95%,55%)] to-[hsl(187,92%,47%)] p-[2px] shadow-[0_20px_60px_-15px_rgba(59,130,246,0.4)]">
+            <div className="relative bg-gradient-to-br from-card/95 to-card/90 dark:from-background/95 dark:to-background/90 backdrop-blur-xl rounded-2xl p-6 sm:p-8 md:p-10">
               {/* Animated background glow */}
               <div className="absolute inset-0 bg-gradient-to-r from-[hsl(217,91%,60%)]/10 via-[hsl(200,95%,55%)]/10 to-[hsl(187,92%,47%)]/10 rounded-2xl" />
+              <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(59,130,246,0.1),transparent_70%)]" />
               
               <div className="relative flex flex-col sm:flex-row items-center justify-between gap-4 sm:gap-6">
                 <div className="flex items-start gap-4 text-center sm:text-left">
@@ -169,7 +174,16 @@ export const Pricing = () => {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, amount: 0.2 }}
               transition={{ duration: 0.6, delay: index * 0.15 }}
-              whileHover={{ y: -12, scale: 1.02 }}
+              whileHover={{ 
+                y: -8, 
+                scale: 1.015,
+                transition: { 
+                  type: "spring", 
+                  stiffness: 400, 
+                  damping: 30,
+                  mass: 0.5
+                }
+              }}
             >
               {/* Animated gradient border for highlighted plan */}
               {plan.highlighted && (
@@ -268,8 +282,8 @@ export const Pricing = () => {
                       whileInView={{ opacity: 1, x: 0 }}
                       transition={{ delay: 0.5 + fIndex * 0.1 }}
                     >
-                      <div className="flex-shrink-0 w-5 h-5 rounded-full flex items-center justify-center mt-0.5 transition-all duration-300 group-hover:scale-110 bg-[hsl(220,100%,98%)] dark:bg-card group-hover:bg-[hsl(215,32%,91%)]/60 dark:group-hover:bg-card/70">
-                        <Check className="w-3 h-3 text-[hsl(222,47%,20%)] dark:text-white" />
+                      <div className="flex-shrink-0 w-5 h-5 rounded-full flex items-center justify-center mt-0.5 transition-all duration-300 group-hover:scale-110 bg-gradient-to-br from-[hsl(var(--gold))]/10 to-[hsl(var(--brand-blue))]/10 dark:from-[hsl(var(--gold))]/20 dark:to-[hsl(var(--brand-blue))]/20 border border-[hsl(var(--gold))]/20 dark:border-[hsl(var(--gold))]/30 group-hover:border-[hsl(var(--gold))]/40 dark:group-hover:border-[hsl(var(--gold))]/50 group-hover:shadow-[0_0_10px_rgba(59,130,246,0.3)]">
+                        <Check className="w-3 h-3 text-[hsl(var(--gold))] dark:text-[hsl(var(--gold))]" />
                       </div>
                       <span className="text-sm leading-relaxed text-card-foreground dark:text-white">
                         {feature}

@@ -1,30 +1,30 @@
 import { motion, useReducedMotion } from "framer-motion";
-import { Lightbulb, Palette, Layers, Rocket } from "lucide-react";
+import { Search, Settings, Rocket, TrendingUp } from "lucide-react";
 
 const steps = [
   {
-    icon: Lightbulb,
+    icon: Search,
     step: "Step 1",
-    title: "Discovery & Strategy",
-    description: "We dive deep into your brand, goals, and target audience. Define creative direction, style preferences, and project scope."
+    title: "Audit & Strategy",
+    description: "Analyze current campaigns, identify opportunities, and define KPIs. Map out channel strategy, budget allocation, and tracking requirements."
   },
   {
-    icon: Palette,
+    icon: Settings,
     step: "Step 2",
-    title: "Concept & Design",
-    description: "Our designers create initial concepts and mockups. You review and provide feedback to refine the creative direction."
-  },
-  {
-    icon: Layers,
-    step: "Step 3",
-    title: "Refinement & Polish",
-    description: "We iterate based on your feedback, perfecting every detail. Multiple revision rounds ensure the design exceeds expectations."
+    title: "Setup & Implementation",
+    description: "Build campaign structures, implement pixels and GA4 events, configure GTM. Set up creative testing frameworks and tracking dashboards."
   },
   {
     icon: Rocket,
+    step: "Step 3",
+    title: "Launch & Test",
+    description: "Deploy campaigns across channels, launch creative variants, and monitor initial performance. Rapid testing to identify winning combinations."
+  },
+  {
+    icon: TrendingUp,
     step: "Step 4",
-    title: "Delivery & Launch",
-    description: "Final files delivered in all required formats. Ongoing support available for updates, variations, and new projects."
+    title: "Optimize & Scale",
+    description: "Weekly optimization based on data, scale winning campaigns, adjust budgets. Continuous creative testing and performance reporting."
   }
 ];
 
@@ -47,14 +47,21 @@ export const HowItWorks = () => {
           viewport={{ once: true }}
           transition={{ duration: 0.8, delay: 0.2 }}
         >
-          <span className="inline-block px-4 py-2 bg-gradient-to-br from-[hsl(var(--gold))] via-[hsl(var(--brand-blue))] to-[hsl(var(--gold))] text-white text-sm font-semibold rounded-full mb-4">
-            How We Work (4 Steps)
-          </span>
-          <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-4 sm:mb-6 text-[hsl(222,47%,20%)] dark:text-foreground">
-            How We <span className="bg-gradient-to-r from-[hsl(var(--gold))] to-[hsl(var(--brand-blue))] bg-clip-text text-transparent">Execute</span>
+          <motion.span 
+            className="inline-block px-3 py-1.5 sm:px-4 sm:py-2 bg-gradient-to-br from-[hsl(var(--gold))] via-[hsl(var(--brand-blue))] to-[hsl(var(--gold))] text-white text-xs sm:text-sm font-bold rounded-full mb-3 sm:mb-4 shadow-[0_8px_24px_-6px_rgba(59,130,246,0.4)] border border-white/20 backdrop-blur-sm relative overflow-hidden"
+            whileHover={{ scale: 1.05 }}
+          >
+            <span className="absolute inset-0 bg-gradient-to-r from-white/0 via-white/20 to-white/0 opacity-50"></span>
+            <span className="relative z-10">Our Process (4 Steps)</span>
+          </motion.span>
+          <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-4 sm:mb-6 text-[hsl(222,47%,20%)] dark:text-white leading-tight tracking-tight">
+            How We <span className="relative inline-block">
+              <span className="bg-gradient-to-r from-[hsl(var(--gold))] via-[hsl(var(--brand-blue))] to-[hsl(var(--gold))] bg-clip-text text-transparent bg-[length:200%_100%]">Execute</span>
+              <span className="absolute -bottom-1 left-0 right-0 h-0.5 bg-gradient-to-r from-transparent via-[hsl(var(--gold))]/40 to-transparent"></span>
+            </span>
           </h2>
           <p className="text-base sm:text-lg md:text-xl text-muted-foreground max-w-3xl leading-relaxed">
-            From concept to delivery in 3–7 days for most projects. Collaborative process, stunning results, and exceptional quality.
+            From audit to optimization in 7–14 days. Data-driven process, measurable results, and continuous improvement.
           </p>
         </motion.div>
 
@@ -83,16 +90,19 @@ export const HowItWorks = () => {
                 
                 <motion.div 
                   className={[
-                    "relative flex-1 bg-card border-2 rounded-xl sm:rounded-2xl p-5 sm:p-7 md:p-9 transition-all duration-300 group",
-                    "dark:bg-card",
+                    "relative flex-1 bg-card/80 backdrop-blur-sm border rounded-xl sm:rounded-2xl p-5 sm:p-7 md:p-9 transition-all duration-300 group overflow-hidden",
                     "text-[hsl(222,47%,20%)] dark:text-white",
-                    "border-[hsl(250,40%,92%)] dark:border-[hsl(250,30%,35%)]/50",
-                    "hover:border-[hsl(var(--gold))] dark:hover:border-[hsl(var(--gold))]",
-                    "hover:shadow-[0_16px_40px_-14px_hsl(217_91%_60%/0.25)] dark:hover:shadow-[0_16px_40px_-14px_rgba(0,0,0,0.35)]",
+                    "border-[hsl(215,32%,91%)] dark:border-border/40",
+                    "hover:border-[hsl(var(--gold))]/60 dark:hover:border-[hsl(var(--gold))]/60",
+                    "hover:shadow-[0_20px_50px_-14px_hsl(217_91%_60%/0.3),0_0_30px_hsl(217_91%_60%/0.1)] dark:hover:shadow-[0_20px_50px_-14px_rgba(59,130,246,0.25),0_0_30px_rgba(59,130,246,0.08)]",
                     "focus:outline-none focus-visible:ring-2 focus-visible:ring-[hsl(var(--gold))]",
                     index % 2 === 1 ? 'md:text-right' : ''
                   ].join(' ')}
-                  whileHover={{ y: -4, scale: 1.01 }}
+                  whileHover={{ 
+                    y: -6, 
+                    scale: 1.01,
+                    transition: { type: "spring", stiffness: 400, damping: 25 }
+                  }}
                   tabIndex={0}
                 >
                   <div className="pointer-events-none absolute inset-0 rounded-xl sm:rounded-2xl bg-gradient-to-br from-[hsl(var(--gold))]/10 dark:from-[hsl(var(--gold))]/20 via-[hsl(250,100%,98%)]/10 dark:via-[hsl(250,45%,20%)]/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />

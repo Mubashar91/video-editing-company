@@ -131,6 +131,20 @@ export const FinalCTA = () => {
             </p>
           </motion.div>
           
+          {/* Free Trial Badge */}
+          <motion.div
+            className="flex justify-center mb-4 sm:mb-6"
+            initial={{ opacity: 0, scale: 0.9 }}
+            whileInView={{ opacity: 1, scale: 1 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.5, delay: 0.2, type: "spring" }}
+          >
+            <div className="px-4 py-2 bg-white/10 backdrop-blur-md rounded-full text-sm font-bold text-white border border-white/20 flex items-center gap-2">
+              <span className="w-2 h-2 bg-green-400 rounded-full animate-pulse"></span>
+              <span>7-Day Free Trial • No Credit Card Required</span>
+            </div>
+          </motion.div>
+
           {/* Single CTA */}
           <motion.div 
             className="flex justify-center mb-10 sm:mb-12"
@@ -142,10 +156,11 @@ export const FinalCTA = () => {
             <Button 
               size="lg"
               onClick={() => window.location.href = '/book-meeting'}
-              className="bg-gradient-to-r from-[hsl(var(--gold))] to-[hsl(var(--brand-blue))] text-white hover:opacity-95 group px-8 sm:px-10 py-5 sm:py-6 text-base sm:text-lg font-bold rounded-2xl shadow-[0_20px_60px_-15px_hsl(217_91%_60%/0.35)] transition-all duration-300 border-0 relative overflow-hidden"
+              className="bg-gradient-to-r from-[hsl(var(--gold))] to-[hsl(var(--brand-blue))] text-white hover:opacity-95 group px-8 sm:px-10 py-5 sm:py-6 text-base sm:text-lg font-bold rounded-2xl shadow-[0_20px_60px_-15px_hsl(217_91%_60%/0.35),0_0_40px_hsl(217_91%_60%/0.2)] hover:shadow-[0_25px_70px_-15px_hsl(217_91%_60%/0.5),0_0_60px_hsl(217_91%_60%/0.3)] transition-all duration-300 border-0 relative overflow-hidden"
             >
+              <span className="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></span>
               <span className="relative flex items-center gap-2">
-                <span>Start Free Audit</span>
+                <span>Start Free Trial</span>
                 <ArrowRight className="h-5 w-5 group-hover:translate-x-1.5 transition-transform duration-300" />
               </span>
             </Button>

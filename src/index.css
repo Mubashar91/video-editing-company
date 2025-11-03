@@ -65,10 +65,13 @@ All colors MUST be HSL.
     --shadow-elegant: 0 20px 60px -15px hsl(215 25% 21% / 0.3);
     --shadow-brutal: 8px 8px 0px hsl(217 91% 60%);
 
-    /* Transitions */
-    --transition-smooth: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+    /* Transitions - Ultra smooth */
+    --transition-smooth: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
     --transition-spring: all 0.6s cubic-bezier(0.34, 1.56, 0.64, 1);
-    --transition-bounce: all 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+    --transition-bounce: all 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+    --transition-modern: all 0.35s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    --transition-butter: all 0.5s cubic-bezier(0.23, 1, 0.32, 1);
+    --transition-premium: all 0.6s cubic-bezier(0.16, 1, 0.3, 1);
 
     --sidebar-background: 210 40% 99%;
     --sidebar-foreground: 222 47% 15%;
@@ -140,7 +143,9 @@ All colors MUST be HSL.
   * {
     @apply border-border;
     scroll-behavior: smooth;
-    transition: color 0.3s ease, background-color 0.3s ease, border-color 0.3s ease;
+    transition: color 0.4s cubic-bezier(0.23, 1, 0.32, 1), 
+                background-color 0.4s cubic-bezier(0.23, 1, 0.32, 1), 
+                border-color 0.4s cubic-bezier(0.23, 1, 0.32, 1);
   }
 
   body {
@@ -303,6 +308,38 @@ All colors MUST be HSL.
       radial-gradient(at 0% 100%, hsl(var(--brand-blue) / 0.15) 0px, transparent 50%);
   }
 
+  /* Ultra-modern gradient backgrounds */
+  .modern-gradient {
+    background: linear-gradient(
+      135deg,
+      hsl(var(--background)) 0%,
+      hsl(var(--card)) 50%,
+      hsl(var(--background)) 100%
+    );
+  }
+
+  /* Animated gradient border */
+  @keyframes border-flow {
+    0%, 100% {
+      background-position: 0% 50%;
+    }
+    50% {
+      background-position: 100% 50%;
+    }
+  }
+
+  .animated-border {
+    position: relative;
+    background: linear-gradient(
+      90deg,
+      hsl(var(--gold)),
+      hsl(var(--brand-blue)),
+      hsl(var(--gold))
+    );
+    background-size: 200% 100%;
+    animation: border-flow 3s ease infinite;
+  }
+
   /* Modern card styles */
   .modern-card {
     background: hsl(var(--card));
@@ -340,6 +377,93 @@ All colors MUST be HSL.
 
   .btn-glow:hover::after {
     transform: translateX(100%);
+  }
+
+  /* Ultra-smooth hover effects */
+  .smooth-hover {
+    transition: all 0.5s cubic-bezier(0.23, 1, 0.32, 1);
+    will-change: transform, box-shadow;
+  }
+
+  .smooth-hover:hover {
+    transform: translateY(-8px) scale(1.02);
+  }
+
+  /* Premium scale animation */
+  @keyframes scale-in {
+    0% {
+      opacity: 0;
+      transform: scale(0.9);
+    }
+    100% {
+      opacity: 1;
+      transform: scale(1);
+    }
+  }
+
+  @keyframes fade-in-up {
+    0% {
+      opacity: 0;
+      transform: translateY(30px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  /* Smooth scroll behavior */
+  html {
+    scroll-behavior: smooth;
+  }
+
+  @media (prefers-reduced-motion: no-preference) {
+    html {
+      scroll-behavior: smooth;
+    }
+  }
+
+  /* Modern text gradients */
+  .text-gradient {
+    background: linear-gradient(
+      135deg,
+      hsl(var(--gold)) 0%,
+      hsl(var(--brand-blue)) 50%,
+      hsl(var(--gold)) 100%
+    );
+    background-size: 200% 200%;
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: gradient-shift 4s ease infinite;
+  }
+
+  /* Modern card with inner glow */
+  .card-glow {
+    position: relative;
+  }
+
+  .card-glow::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    border-radius: inherit;
+    padding: 1px;
+    background: linear-gradient(
+      135deg,
+      hsl(var(--gold) / 0.3),
+      hsl(var(--brand-blue) / 0.3),
+      hsl(var(--gold) / 0.3)
+    );
+    -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+    -webkit-mask-composite: xor;
+    mask-composite: exclude;
+    opacity: 0;
+    transition: opacity 0.4s ease;
+  }
+
+  .card-glow:hover::before {
+    opacity: 1;
   }
 
   /* Enhanced backdrop blur support */

@@ -40,8 +40,18 @@ export const ToolsIntegration = () => {
           viewport={{ once: true }}
           transition={{ duration: 0.6, ease: "easeOut" }}
         >
-          <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-3 sm:mb-4 px-2 text-[hsl(222,47%,11%)] dark:text-foreground">
-            Seamless <span className="bg-gradient-to-r from-[hsl(var(--gold))] to-[hsl(var(--brand-blue))] bg-clip-text text-transparent">Ad & Analytics Integrations</span>
+          <motion.span 
+            className="inline-block px-3 py-1.5 sm:px-4 sm:py-2 bg-gradient-to-br from-[hsl(var(--gold))] via-[hsl(var(--brand-blue))] to-[hsl(var(--gold))] text-white text-xs sm:text-sm font-bold rounded-full mb-3 sm:mb-4 shadow-[0_8px_24px_-6px_rgba(59,130,246,0.4)] border border-white/20 backdrop-blur-sm relative overflow-hidden"
+            whileHover={{ scale: 1.05 }}
+          >
+            <span className="absolute inset-0 bg-gradient-to-r from-white/0 via-white/20 to-white/0 opacity-50"></span>
+            <span className="relative z-10">Platform Integrations</span>
+          </motion.span>
+          <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-3 sm:mb-4 px-2 text-[hsl(222,47%,20%)] dark:text-white leading-tight tracking-tight">
+            Seamless <span className="relative inline-block">
+              <span className="bg-gradient-to-r from-[hsl(var(--gold))] via-[hsl(var(--brand-blue))] to-[hsl(var(--gold))] bg-clip-text text-transparent bg-[length:200%_100%]">Ad & Analytics Integrations</span>
+              <span className="absolute -bottom-1 left-0 right-0 h-0.5 bg-gradient-to-r from-transparent via-[hsl(var(--gold))]/40 to-transparent"></span>
+            </span>
           </h2>
           <p className="text-base sm:text-lg md:text-xl text-muted-foreground max-w-2xl px-2">
             We connect platforms end‑to‑end—ads, pixels, GA4/GTM, and dashboards—so budgets flow into measurable revenue.
@@ -59,33 +69,41 @@ export const ToolsIntegration = () => {
             {tools.slice(0, 18).map((tool, index) => (
               <motion.div 
                 key={index}
-                className="bg-card border-2 border-[hsl(215,32%,91%)] dark:border-[hsl(250,30%,35%)]/50 rounded-lg p-3 sm:p-4 text-center hover:border-[hsl(var(--gold))] dark:hover:border-[hsl(var(--gold))] hover:shadow-[0_10px_30px_-10px_hsl(217_91%_60%/0.25)] dark:hover:shadow-[0_10px_30px_-10px_rgba(0,0,0,0.4)] transition-all duration-300 group"
+                className="relative bg-card/80 backdrop-blur-sm border border-[hsl(215,32%,91%)] dark:border-border/40 rounded-xl p-3 sm:p-4 text-center hover:border-[hsl(var(--gold))]/60 dark:hover:border-[hsl(var(--gold))]/60 hover:shadow-[0_12px_35px_-10px_hsl(217_91%_60%/0.3),0_0_20px_hsl(217_91%_60%/0.1)] dark:hover:shadow-[0_12px_35px_-10px_rgba(59,130,246,0.25),0_0_20px_rgba(59,130,246,0.08)] transition-all duration-300 group overflow-hidden"
                 initial={{ opacity: 0, scale: 0.8 }}
                 whileInView={{ opacity: 1, scale: 1 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.3, delay: index * 0.05, ease: "easeOut" }}
+                whileHover={{ 
+                  y: -4, 
+                  scale: 1.03,
+                  transition: { type: "spring", stiffness: 400, damping: 25 }
+                }}
               >
-                <p className="text-sm sm:text-base font-semibold text-[hsl(222,47%,20%)] dark:text-white transition-colors">
+                <div className="absolute inset-0 bg-gradient-to-br from-[hsl(var(--gold))]/5 to-[hsl(var(--brand-blue))]/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                <p className="text-sm sm:text-base font-bold text-[hsl(222,47%,20%)] dark:text-white transition-colors relative z-10">
                   {tool.name}
                 </p>
-                <p className="text-[10px] sm:text-xs text-[hsl(var(--gold))] dark:text-[hsl(var(--gold))] mt-1">
+                <span className="inline-block mt-2 px-2 py-0.5 text-[10px] sm:text-xs font-semibold bg-gradient-to-r from-[hsl(var(--gold))]/10 to-[hsl(var(--brand-blue))]/10 dark:from-[hsl(var(--gold))]/20 dark:to-[hsl(var(--brand-blue))]/20 text-[hsl(var(--gold))] dark:text-[hsl(var(--gold))] rounded-full border border-[hsl(var(--gold))]/20 dark:border-[hsl(var(--gold))]/30 relative z-10">
                   {tool.category}
-                </p>
+                </span>
               </motion.div>
             ))}
           </motion.div>
 
           <motion.div 
-            className="bg-card border-2 border-[hsl(215,32%,91%)] dark:border-[hsl(250,30%,35%)]/50 rounded-lg sm:rounded-xl p-5 sm:p-6 md:p-8 text-center"
+            className="relative bg-gradient-to-br from-card/80 to-card/60 backdrop-blur-xl border border-[hsl(215,32%,91%)] dark:border-border/40 rounded-2xl p-6 sm:p-8 md:p-10 text-center overflow-hidden group hover:border-[hsl(var(--gold))]/60 dark:hover:border-[hsl(var(--gold))]/60 hover:shadow-[0_20px_50px_-15px_hsl(217_91%_60%/0.3),0_0_30px_hsl(217_91%_60%/0.1)] dark:hover:shadow-[0_20px_50px_-15px_rgba(59,130,246,0.25),0_0_30px_rgba(59,130,246,0.08)] transition-all duration-300"
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6, delay: 0.4, ease: "easeOut" }}
           >
-            <p className="text-base sm:text-lg text-[hsl(222,47%,20%)] dark:text-white mb-3 sm:mb-4">
-              <span className="font-bold text-[hsl(var(--gold))] dark:text-[hsl(var(--gold))]">Using a different system?</span> We adapt. 
+            <div className="absolute inset-0 bg-gradient-to-br from-[hsl(var(--gold))]/5 to-[hsl(var(--brand-blue))]/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+            <div className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-transparent via-[hsl(var(--gold))]/50 to-transparent"></div>
+            <p className="text-base sm:text-lg md:text-xl font-bold text-[hsl(222,47%,20%)] dark:text-white mb-3 sm:mb-4 relative z-10">
+              <span className="bg-gradient-to-r from-[hsl(var(--gold))] to-[hsl(var(--brand-blue))] bg-clip-text text-transparent">Using a different system?</span> We adapt. 
             </p>
-            <p className="text-sm sm:text-base text-[hsl(215,20%,35%)] dark:text-white">
+            <p className="text-sm sm:text-base text-muted-foreground dark:text-white/80 leading-relaxed relative z-10">
               Share your format or API—CSV, Sheets, CRM, or DB. We'll match your workflow end‑to‑end.
             </p>
           </motion.div>

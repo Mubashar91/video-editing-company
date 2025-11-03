@@ -127,10 +127,26 @@ export const CaseStudies = () => {
               initial={{ opacity: 0, y: 50 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              transition={{ duration: 0.6, delay: index * 0.1 }}
+              transition={{ 
+                duration: 0.7, 
+                delay: index * 0.1,
+                ease: [0.23, 1, 0.32, 1],
+                type: "spring",
+                stiffness: 100,
+                damping: 20
+              }}
               className="group relative bg-card/80 backdrop-blur-sm border border-[hsl(215,32%,91%)] dark:border-border/40 rounded-2xl overflow-hidden hover:border-[hsl(var(--gold))]/60 dark:hover:border-[hsl(var(--gold))]/60 hover:shadow-[0_25px_70px_-15px_hsl(217_91%_60%/0.35),0_0_35px_hsl(217_91%_60%/0.15)] dark:hover:shadow-[0_25px_70px_-15px_rgba(59,130,246,0.3),0_0_35px_rgba(59,130,246,0.1)] transition-all duration-300 cursor-pointer w-full hover:-translate-y-1"
               onClick={() => navigate(`/case-study/${study.id}`)}
-              whileHover={{ y: -8 }}
+              whileHover={{ 
+                y: -6, 
+                scale: 1.01,
+                transition: {
+                  type: "spring",
+                  stiffness: 400,
+                  damping: 30,
+                  mass: 0.5
+                }
+              }}
             >
               {/* Image */}
               <div className="relative h-44 sm:h-52 md:h-48 lg:h-56 overflow-hidden">

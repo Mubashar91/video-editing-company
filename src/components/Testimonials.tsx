@@ -44,8 +44,11 @@ export const Testimonials = () => {
           viewport={{ once: true }}
           transition={{ duration: 0.6, ease: "easeOut" }}
         >
-          <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-3 sm:mb-4 px-2 text-[hsl(222,47%,11%)] dark:text-foreground">
-            Trusted for <span className="bg-gradient-to-r from-[hsl(var(--gold))] to-[hsl(var(--brand-blue))] bg-clip-text text-transparent">Ad Performance</span>
+          <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-3 sm:mb-4 text-[hsl(222,47%,20%)] dark:text-white leading-tight tracking-tight px-2">
+            Real Results from <span className="relative inline-block">
+              <span className="bg-gradient-to-r from-[hsl(var(--gold))] via-[hsl(var(--brand-blue))] to-[hsl(var(--gold))] bg-clip-text text-transparent bg-[length:200%_100%]">Growth Teams</span>
+              <span className="absolute -bottom-1 left-0 right-0 h-0.5 bg-gradient-to-r from-transparent via-[hsl(var(--gold))]/40 to-transparent"></span>
+            </span>
           </h2>
           <p className="text-base sm:text-lg md:text-xl text-muted-foreground max-w-2xl px-2">
             Real results—lower CPA, higher ROAS, and faster learning loops across Google, Meta, TikTok, Snapchat, LinkedIn, and X.
@@ -60,11 +63,34 @@ export const Testimonials = () => {
               initial={{ opacity: 0, y: 50 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              transition={{ duration: 0.5, delay: index * 0.15, ease: "easeOut" }}
+              transition={{ 
+                duration: 0.6, 
+                delay: index * 0.12, 
+                ease: [0.23, 1, 0.32, 1],
+                type: "spring",
+                stiffness: 100,
+                damping: 20
+              }}
+              whileHover={{
+                y: -6,
+                scale: 1.01,
+                transition: {
+                  type: "spring",
+                  stiffness: 400,
+                  damping: 30
+                }
+              }}
             >
               <div className="flex gap-1 mb-3 sm:mb-4">
                 {[...Array(testimonial.rating)].map((_, i) => (
-                  <Star key={i} className="w-4 h-4 sm:w-5 sm:h-5 fill-gold text-gold" />
+                  <motion.div
+                    key={i}
+                    initial={{ scale: 0, rotate: -180 }}
+                    whileInView={{ scale: 1, rotate: 0 }}
+                    transition={{ delay: 0.1 * i, type: "spring", stiffness: 200 }}
+                  >
+                    <Star className="w-4 h-4 sm:w-5 sm:h-5 fill-gold text-gold drop-shadow-[0_2px_4px_rgba(59,130,246,0.3)]" />
+                  </motion.div>
                 ))}
               </div>
               

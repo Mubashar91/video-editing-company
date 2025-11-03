@@ -96,7 +96,10 @@ export const Hero = () => {
             </motion.div>
             
             <h1 className="text-3xl xs:text-4xl sm:text-5xl md:text-6xl lg:text-6xl xl:text-7xl font-extrabold mb-4 sm:mb-5 md:mb-6 leading-[1.15] sm:leading-[1.12] md:leading-[1.1] tracking-tight text-[hsl(222,47%,12%)] dark:text-white">
-              Profitable <span className="bg-gradient-to-r from-[hsl(var(--gold))] to-[hsl(var(--brand-blue))] bg-clip-text text-transparent">Ad Campaign Management</span>
+              Profitable <span className="relative inline-block">
+                <span className="bg-gradient-to-r from-[hsl(var(--gold))] via-[hsl(var(--brand-blue))] to-[hsl(var(--gold))] bg-clip-text text-transparent bg-[length:200%_100%] animate-[gradient-shift_3s_ease_infinite]">Ad Campaign Management</span>
+                <span className="absolute -bottom-2 left-0 right-0 h-1 bg-gradient-to-r from-[hsl(var(--gold))]/0 via-[hsl(var(--gold))]/50 to-[hsl(var(--gold))]/0"></span>
+              </span>
             </h1>
             
             <p className="text-base sm:text-lg md:text-xl lg:text-xl text-muted-foreground mb-6 sm:mb-7 md:mb-8 leading-relaxed max-w-xl font-normal">
@@ -191,10 +194,11 @@ export const Hero = () => {
                   repeat: Infinity,
                   ease: "easeInOut"
                 }}
-                className="bg-gradient-to-br from-[hsl(217,91%,65%)] via-[hsl(217,91%,60%)] to-[hsl(217,91%,55%)] text-white px-3 py-2 sm:px-4 sm:py-2.5 rounded-full shadow-lg border-2 border-background flex items-center gap-1.5 sm:gap-2"
+                className="relative bg-gradient-to-br from-[hsl(217,91%,65%)] via-[hsl(217,91%,60%)] to-[hsl(217,91%,55%)] text-white px-3 py-2 sm:px-4 sm:py-2.5 rounded-full shadow-[0_10px_30px_-5px_rgba(59,130,246,0.4)] border border-white/20 flex items-center gap-1.5 sm:gap-2 backdrop-blur-sm"
               >
-                <Award className="w-3 h-3 sm:w-4 sm:h-4" aria-hidden="true" />
-                <span className="text-[10px] sm:text-xs font-bold whitespace-nowrap">Top Rated</span>
+                <div className="absolute inset-0 rounded-full bg-gradient-to-r from-white/0 via-white/20 to-white/0 opacity-50"></div>
+                <Award className="w-3 h-3 sm:w-4 sm:h-4 relative z-10" aria-hidden="true" />
+                <span className="text-[10px] sm:text-xs font-bold whitespace-nowrap relative z-10">Top Rated</span>
               </motion.div>
             </motion.div>
             
