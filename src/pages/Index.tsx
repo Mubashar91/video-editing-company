@@ -14,7 +14,7 @@ import { FinalCTA } from "@/components/FinalCTA";
 
 const Index = () => {
   return (
-    <main className="min-h-screen overflow-x-hidden">
+    <main className="min-h-screen overflow-x-hidden hero-section-bg">
       <Navbar />
       <Hero />
     

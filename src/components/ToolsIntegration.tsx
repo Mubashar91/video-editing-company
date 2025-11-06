@@ -26,7 +26,7 @@ const categories = ["Email", "Marketing", "Automation", "Management", "Productiv
 export const ToolsIntegration = () => {
   return (
     <motion.section 
-      className="relative py-8 sm:py-10 md:py-12 lg:py-14 bg-gradient-to-b from-background via-muted/10 to-background z-60"
+      className="relative py-8 sm:py-10 md:py-12 lg:py-14 z-60"
       initial={{ opacity: 0, y: 200 }}
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true, amount: 0.1 }}
@@ -47,11 +47,8 @@ export const ToolsIntegration = () => {
             <span className="absolute inset-0 bg-gradient-to-r from-white/0 via-white/10 to-white/0 opacity-30"></span>
             <span className="relative z-10">Email Platform Integrations</span>
           </motion.span>
-          <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-3 sm:mb-4 px-2 text-foreground dark:text-white leading-tight tracking-tight">
-            Seamless <span className="relative inline-block">
-              <span className="bg-gradient-to-r from-[hsl(var(--brand-blue))] via-[hsl(var(--brand-blue))] to-[hsl(var(--brand-blue))] bg-clip-text text-transparent bg-[length:200%_100%]">Email Tool Integrations</span>
-              <span className="absolute -bottom-1 left-0 right-0 h-0.5 bg-gradient-to-r from-transparent via-[hsl(var(--brand-blue))]/40 to-transparent"></span>
-            </span>
+          <h2 className="section-heading">
+            Seamless <span className="gradient-heading">Email Tool Integrations</span>
           </h2>
           <p className="text-base sm:text-lg md:text-xl text-muted-foreground max-w-2xl px-2 dark:text-white/90">
             We integrate with all major email platforms, automation tools, and productivity apps—creating a unified email management system.

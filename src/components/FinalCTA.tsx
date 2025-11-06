@@ -1,11 +1,11 @@
 import { Button } from "@/components/ui/button";
-import { ArrowRight, Mail, Sparkles, Clock, CheckCircle2, Award, Inbox } from "lucide-react";
+import { ArrowRight, Video, Sparkles, Clock, CheckCircle2, Award, Film } from "lucide-react";
 import { motion } from "framer-motion";
 
 export const FinalCTA = () => {
   return (
     <motion.section 
-      className="relative overflow-hidden py-12 sm:py-16 md:py-20 lg:py-24 xl:py-28 bg-[image:var(--gradient-light)] dark:bg-[image:var(--gradient-dark)] z-60"
+      className="relative overflow-hidden py-12 sm:py-16 md:py-20 lg:py-24 xl:py-28 hero-section-bg z-60"
       initial={{ opacity: 0 }}
       whileInView={{ opacity: 1 }}
       viewport={{ once: true, margin: "-50px" }}
@@ -91,7 +91,7 @@ export const FinalCTA = () => {
               >
                 <Sparkles className="w-4 h-4 sm:w-5 sm:h-5" />
               </motion.div>
-              <span className="whitespace-nowrap">Achieve Inbox Zero Today</span>
+              <span className="whitespace-nowrap bg-gradient-to-r from-yellow-400 to-orange-500 bg-clip-text text-transparent font-extrabold">Create Viral Content Today</span>
               <div className="w-1.5 h-1.5 xs:w-2 xs:h-2 rounded-full bg-[hsl(var(--gold))] animate-pulse"></div>
             </div>
           </motion.div>
@@ -104,10 +104,10 @@ export const FinalCTA = () => {
             viewport={{ once: true }}
             transition={{ duration: 0.7, delay: 0.1 }}
           >
-            <span className="block drop-shadow-lg">Ready to Master</span>
+            <span className="block drop-shadow-lg">Ready to Transform</span>
             <span className="relative inline-block mt-2 sm:mt-3">
-              <span className="relative z-10 text-primary drop-shadow-2xl">
-                Your Inbox?
+              <span className="relative z-10 bg-gradient-to-r from-purple-600 via-pink-500 to-orange-500 bg-clip-text text-transparent drop-shadow-2xl animate-gradient">
+                Your Videos?
               </span>
               <motion.span 
                 className="absolute bottom-2 sm:bottom-3 left-0 w-full h-4 sm:h-5 bg-white/30 -z-0 rounded-full blur-sm"
@@ -127,7 +127,7 @@ export const FinalCTA = () => {
             transition={{ duration: 0.5, delay: 0.15 }}
           >
             <p className="text-lg sm:text-xl md:text-2xl text-muted-foreground leading-relaxed">
-              Transform email chaos into organized productivity with professional inbox management, automation, and daily optimization.
+              Transform raw footage into viral content with professional editing, color grading, motion graphics, and expert storytelling.
             </p>
           </motion.div>
           
@@ -141,7 +141,7 @@ export const FinalCTA = () => {
           >
             <div className="px-4 py-2 bg-foreground/5 dark:bg-white/10 backdrop-blur-md rounded-full text-sm font-bold text-foreground dark:text-white border border-border dark:border-white/20 flex items-center gap-2">
               <span className="w-2 h-2 bg-green-400 rounded-full animate-pulse"></span>
-              <span>Free Email Audit • No Commitment Required</span>
+              <span>Free Video Consultation • No Commitment Required</span>
             </div>
           </motion.div>
 
@@ -156,11 +156,11 @@ export const FinalCTA = () => {
             <Button 
               size="lg"
               onClick={() => window.location.href = '/book-meeting'}
-              className="bg-gradient-to-r from-[hsl(var(--gold))] to-[hsl(var(--brand-blue))] text-white hover:opacity-95 group px-8 sm:px-10 py-5 sm:py-6 text-base sm:text-lg font-bold rounded-2xl shadow-[0_20px_60px_-15px_hsl(217_91%_60%/0.35),0_0_40px_hsl(217_91%_60%/0.2)] hover:shadow-[0_25px_70px_-15px_hsl(217_91%_60%/0.5),0_0_60px_hsl(217_91%_60%/0.3)] transition-all duration-300 border-0 relative overflow-hidden"
+              className="bg-gradient-to-r from-purple-600 via-pink-500 to-orange-500 text-white hover:from-purple-700 hover:via-pink-600 hover:to-orange-600 group px-8 sm:px-10 py-5 sm:py-6 text-base sm:text-lg font-bold rounded-2xl shadow-[0_20px_60px_-15px_rgba(168,85,247,0.6),0_0_40px_rgba(236,72,153,0.4)] hover:shadow-[0_25px_70px_-15px_rgba(168,85,247,0.8),0_0_60px_rgba(236,72,153,0.6)] transition-all duration-300 border-0 relative overflow-hidden"
             >
               <span className="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></span>
               <span className="relative flex items-center gap-2">
-                <span>Get Your Free Audit</span>
+                <span>Get Your Free Consultation</span>
                 <ArrowRight className="h-5 w-5 group-hover:translate-x-1.5 transition-transform duration-300" />
               </span>
             </Button>
@@ -179,7 +179,7 @@ export const FinalCTA = () => {
             whileInView={{ opacity: 1 }}
             transition={{ duration: 0.4, delay: 0.3 }}
           >
-            Join 500+ professionals achieving inbox zero with our proven email management system.
+            Join 1000+ creators growing their audience with our professional video editing services.
           </motion.p>
         </motion.div>
       </div>

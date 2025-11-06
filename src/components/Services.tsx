@@ -1,43 +1,43 @@
-import { Mail, Inbox, Send, Filter, BarChart3, Sparkles } from "lucide-react";
+import { Video, Scissors, Palette, Sparkles, Film, Zap } from "lucide-react";
 import { motion, useInView, useSpring, useTransform } from "framer-motion";
 import { useRef } from "react";
 
 const services = [
   {
-    icon: Inbox,
-    title: "Inbox Management",
-    description: "Complete inbox organization, prioritization, and daily management to keep your email under control and stress-free",
-    benefit: "Zero inbox chaos"
+    icon: Scissors,
+    title: "Shortform Video Editing",
+    description: "Expert editing for TikTok, Instagram Reels, and YouTube Shorts. Fast-paced cuts, trending effects, and viral-ready content under 60 seconds",
+    benefit: "Viral-ready content"
   },
   {
-    icon: Mail,
-    title: "Email Campaign Management",
-    description: "Design, schedule, and manage email marketing campaigns with personalized content and optimal timing",
-    benefit: "Higher engagement"
+    icon: Film,
+    title: "Longform Video Production",
+    description: "Professional editing for YouTube videos, podcasts, documentaries, and webinars. Complete post-production with storytelling focus",
+    benefit: "Cinematic quality"
   },
   {
-    icon: Send,
-    title: "Response & Follow-up",
-    description: "Professional email responses, follow-ups, and correspondence management to maintain timely communication",
-    benefit: "Never miss a reply"
+    icon: Video,
+    title: "Video Cutting & Trimming",
+    description: "Precision cutting, scene selection, and pacing optimization. Remove dead air, mistakes, and create engaging flow throughout your content",
+    benefit: "Perfect pacing"
   },
   {
-    icon: Filter,
-    title: "Email Filtering & Automation",
-    description: "Smart filters, rules, and automation to organize incoming emails and reduce manual sorting time",
-    benefit: "Save hours daily"
+    icon: Palette,
+    title: "Color Grading & Correction",
+    description: "Professional color grading, LUT application, and color correction to achieve cinematic looks and consistent brand aesthetics",
+    benefit: "Cinematic look"
   },
   {
-    icon: BarChart3,
-    title: "Analytics & Reporting",
-    description: "Track email performance, open rates, response times, and engagement metrics with detailed reports",
-    benefit: "Data-driven insights"
+    icon: Zap,
+    title: "Motion Graphics & VFX",
+    description: "Eye-catching motion graphics, animated titles, lower thirds, transitions, and visual effects that enhance your storytelling",
+    benefit: "Professional polish"
   },
   {
     icon: Sparkles,
-    title: "Email Strategy & Optimization",
-    description: "Comprehensive email strategy, template creation, and workflow optimization for maximum efficiency",
-    benefit: "Streamlined workflow"
+    title: "Audio Enhancement",
+    description: "Crystal-clear audio mixing, noise reduction, music selection, and sound design to create immersive viewing experiences",
+    benefit: "Studio-quality sound"
   }
 ];
 
@@ -49,7 +49,7 @@ export const Services = () => {
     <motion.section 
       ref={ref}
       id="services"
-      className="relative py-8 sm:py-10 md:py-14 lg:py-16 bg-background text-foreground z-30 overflow-hidden min-h-[500px]"
+      className="relative py-8 sm:py-10 md:py-14 lg:py-16 text-foreground z-30 overflow-hidden min-h-[500px]"
       initial={{ opacity: 0, y: 50 }}
       animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 50 }}
       transition={{ 
@@ -59,9 +59,6 @@ export const Services = () => {
         stiffness: 80
       }}
     >
-      {/* Animated background elements */}
-      <div className="absolute top-10 right-5 w-64 h-64 sm:top-16 sm:right-8 sm:w-80 sm:h-80 md:top-20 md:right-10 md:w-96 md:h-96 bg-gold/5 rounded-full blur-[100px] md:blur-[120px]" />
-      <div className="absolute bottom-10 left-5 w-56 h-56 sm:bottom-16 sm:left-8 sm:w-72 sm:h-72 md:bottom-20 md:left-10 md:w-80 md:h-80 bg-gold/5 rounded-full blur-[100px] md:blur-[120px]" />
       <div className="container mx-auto px-4 sm:px-6 md:px-10 lg:px-12 xl:px-16">
         <motion.div 
           className="mb-8 sm:mb-10 md:mb-12 lg:mb-16 relative z-10 text-left"
@@ -70,15 +67,15 @@ export const Services = () => {
           viewport={{ once: true }}
           transition={{ duration: 0.8, delay: 0.2 }}
         >
-          <span className="inline-block px-3 py-1.5 sm:px-4 sm:py-2 md:px-5 md:py-2.5 bg-gradient-to-br from-[hsl(var(--gold))] via-[hsl(var(--brand-blue))] to-[hsl(var(--gold))] text-white text-xs sm:text-sm md:text-base font-semibold rounded-full mb-3 sm:mb-4 shadow-[0_8px_24px_-6px_rgba(0,123,255,0.4)] border border-white/20 backdrop-blur-sm relative overflow-hidden">
+          <span className="inline-block px-3 py-1.5 sm:px-4 sm:py-2 md:px-5 md:py-2.5 bg-gradient-to-r from-purple-600 via-pink-500 to-orange-500 text-white text-xs sm:text-sm md:text-base font-semibold rounded-full mb-3 sm:mb-4 shadow-[0_8px_24px_-6px_rgba(168,85,247,0.6)] border border-white/30 backdrop-blur-sm relative overflow-hidden animate-pulse">
             <span className="absolute inset-0 bg-gradient-to-r from-white/0 via-white/20 to-white/0 opacity-50"></span>
-            <span className="relative z-10">Email Management Services</span>
+            <span className="relative z-10">Video Editing Services</span>
           </span>
-          <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-4 sm:mb-6 text-foreground dark:text-white leading-tight tracking-tight">
-            Complete <span className="text-primary">Email Solutions</span>
+          <h2 className="section-heading">
+            Complete <span className="gradient-heading">Video Solutions</span>
           </h2>
           <p className="text-base sm:text-lg md:text-lg lg:text-xl text-muted-foreground max-w-3xl leading-relaxed px-2 dark:text-white/90">
-            From inbox management to campaign execution—organized, optimized, and managed with professional care and attention to detail.
+            From shortform clips to longform productions—cutting, color grading, motion graphics, and audio enhancement with professional expertise.
           </p>
         </motion.div>
 
@@ -86,7 +83,7 @@ export const Services = () => {
           {services.map((service, index) => (
             <motion.div 
               key={index}
-              className="relative bg-card text-foreground dark:text-white border-2 border-[hsl(215,32%,91%)] dark:border-[hsl(250,30%,35%)]/50 p-5 sm:p-6 md:p-7 lg:p-9 xl:p-10 rounded-xl sm:rounded-2xl hover:border-[hsl(var(--gold))] dark:hover:border-[hsl(var(--gold))] hover:shadow-[0_25px_80px_-20px_hsl(217_91%_60%/0.25)] dark:hover:shadow-[0_25px_80px_-20px_rgba(0,0,0,0.4)] transition-all duration-700 group overflow-hidden"
+              className="relative bg-card/80 backdrop-blur-sm text-foreground dark:text-white border border-border p-5 sm:p-6 md:p-7 lg:p-9 xl:p-10 rounded-xl sm:rounded-2xl hover:border-[hsl(var(--brand-blue))]/40 dark:hover:border-[hsl(var(--brand-blue))]/40 hover:shadow-[0_25px_80px_-20px_hsl(217_91%_60%/0.2)] dark:hover:shadow-[0_25px_80px_-20px_rgba(59,130,246,0.25)] transition-all duration-700 group overflow-hidden"
               initial={{ opacity: 0, y: 60, scale: 0.9 }}
               animate={isInView ? { opacity: 1, y: 0, scale: 1 } : { opacity: 0, y: 60, scale: 0.9 }}
               transition={{ 
@@ -106,11 +103,11 @@ export const Services = () => {
               style={{ transformStyle: "preserve-3d" }}
             >
               {/* Hover gradient overlay */}
-              <div className="absolute inset-0 bg-gradient-to-br from-[hsl(var(--gold))]/10 dark:from-[hsl(var(--gold))]/20 via-[hsl(250,100%,98%)]/10 dark:via-[hsl(250,45%,20%)]/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-700" />
+              <div className="absolute inset-0 bg-gradient-to-br from-cyan-400/10 via-blue-400/10 to-purple-400/10 dark:from-cyan-500/20 dark:via-blue-500/20 dark:to-purple-500/20 opacity-0 group-hover:opacity-100 transition-opacity duration-700" />
               
               <div className="flex flex-col sm:flex-row md:flex-col lg:flex-row items-start gap-4 sm:gap-5 md:gap-5 lg:gap-6 relative z-10">
                 <motion.div 
-                  className="flex-shrink-0 w-14 h-14 sm:w-16 sm:h-16 md:w-14 md:h-14 lg:w-16 lg:h-16 rounded-lg sm:rounded-xl bg-gradient-to-br from-[hsl(var(--gold))] via-[hsl(var(--brand-blue))] to-[hsl(var(--gold))] text-white ring-1 ring-[hsl(var(--gold))]/30 flex items-center justify-center group-hover:scale-110 group-hover:rotate-3 transition-all duration-500 shadow-[0_18px_40px_-12px_hsl(var(--brand-blue)),0_0_20px_hsl(var(--gold)/0.3)] group-hover:shadow-[0_20px_50px_-12px_hsl(var(--brand-blue)),0_0_30px_hsl(var(--gold)/0.5)] relative overflow-hidden"
+                  className="flex-shrink-0 w-14 h-14 sm:w-16 sm:h-16 md:w-14 md:h-14 lg:w-16 lg:h-16 rounded-lg sm:rounded-xl bg-gradient-to-br from-pink-500 via-purple-500 to-indigo-500 text-white ring-2 ring-purple-400/50 flex items-center justify-center group-hover:scale-110 group-hover:rotate-3 transition-all duration-500 shadow-[0_18px_40px_-12px_rgba(168,85,247,0.6)] group-hover:shadow-[0_20px_50px_-12px_rgba(236,72,153,0.8)] relative overflow-hidden"
                   whileHover={{ rotate: 360 }}
                   transition={{ duration: 0.6 }}
                   animate={{
@@ -135,7 +132,7 @@ export const Services = () => {
                   <p className="text-sm sm:text-base md:text-sm lg:text-base text-muted-foreground mb-3 sm:mb-4 md:mb-4 leading-relaxed dark:text-white/90">
                     {service.description}
                   </p>
-                  <div className="inline-flex items-center px-3 py-1.5 sm:px-4 sm:py-2 md:px-3.5 md:py-1.5 lg:px-4 lg:py-2 bg-card border border-[hsl(var(--gold))]/30 dark:border-[hsl(var(--gold))]/50 rounded-full text-[hsl(var(--gold))] dark:text-[hsl(var(--gold))] text-xs sm:text-sm md:text-xs lg:text-sm font-semibold group-hover:bg-gradient-to-r group-hover:from-[hsl(var(--gold))] group-hover:to-[hsl(var(--brand-blue))] group-hover:text-white group-hover:border-transparent transition-all duration-500">
+                  <div className="inline-flex items-center px-3 py-1.5 sm:px-4 sm:py-2 md:px-3.5 md:py-1.5 lg:px-4 lg:py-2 bg-gradient-to-r from-cyan-100 to-blue-100 dark:from-cyan-900/30 dark:to-blue-900/30 border border-cyan-300 dark:border-cyan-600/50 rounded-full text-cyan-700 dark:text-cyan-300 text-xs sm:text-sm md:text-xs lg:text-sm font-semibold group-hover:bg-gradient-to-r group-hover:from-emerald-500 group-hover:to-cyan-500 group-hover:text-white group-hover:border-transparent transition-all duration-500 shadow-sm group-hover:shadow-lg group-hover:shadow-cyan-500/50">
                     <Sparkles className="w-3.5 h-3.5 sm:w-4 sm:h-4 md:w-3.5 md:h-3.5 lg:w-4 lg:h-4 mr-1.5 sm:mr-2 md:mr-1.5 lg:mr-2" />
                     <span className="leading-none">{service.benefit}</span>
                   </div>

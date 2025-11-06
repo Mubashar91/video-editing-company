@@ -7,6 +7,7 @@ import { Menu, X, Sun, Moon } from "lucide-react";
 export const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
+  const [activeSection, setActiveSection] = useState<string>("");
   const { theme, setTheme } = useTheme();
 
   useEffect(() => {
@@ -15,6 +16,39 @@ export const Navbar = () => {
     };
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
+  // Track active section for nav highlighting
+  useEffect(() => {
+    const items = [
+      { id: "services" },
+      { id: "how-it-works" },
+      { id: "pricing" },
+      { id: "testimonials" },
+      { id: "faq" },
+    ];
+
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            setActiveSection(entry.target.id);
+          }
+        });
+      },
+      {
+        root: null,
+        rootMargin: "-40% 0px -50% 0px", // focus mid viewport
+        threshold: 0.1,
+      }
+    );
+
+    items.forEach(({ id }) => {
+      const el = document.getElementById(id);
+      if (el) observer.observe(el);
+    });
+
+    return () => observer.disconnect();
   }, []);
 
   const toggleTheme = () => {
@@ -55,10 +89,10 @@ export const Navbar = () => {
       initial={{ y: -100 }}
       animate={{ y: 0 }}
       transition={{ duration: 0.6, ease: [0.6, -0.05, 0.01, 0.99] }}
-      className={`fixed top-0 left-0 right-0 z-[9999] transition-all duration-500 ${
+      className={`fixed top-0 left-0 right-0 z-[9999] transition-all duration-500 hero-section-bg ${
         scrolled
-          ? "bg-background/95 backdrop-blur-2xl border-b border-border/60 shadow-[0_8px_32px_-8px_rgba(0,0,0,0.12)]"
-          : "bg-background/80 backdrop-blur-xl"
+          ? "backdrop-blur-2xl border-b border-border/60 shadow-[0_8px_32px_-8px_rgba(0,0,0,0.12)] dark:shadow-[0_8px_32px_-8px_rgba(147,51,234,0.15)]"
+          : "backdrop-blur-xl"
       }`}
       style={{
         backdropFilter: scrolled ? 'blur(24px) saturate(180%)' : 'blur(16px) saturate(150%)'
@@ -74,7 +108,7 @@ export const Navbar = () => {
             className="flex items-center space-x-2 sm:space-x-3"
           >
             <motion.div 
-              className="w-8 h-8 sm:w-9 sm:h-9 md:w-9 md:h-9 lg:w-10 lg:h-10 bg-gradient-to-br from-[hsl(211,100%,55%)] to-[hsl(199,89%,48%)] rounded-lg flex items-center justify-center shadow-md hover:shadow-lg transition-all duration-300"
+              className="w-8 h-8 sm:w-9 sm:h-9 md:w-9 md:h-9 lg:w-10 lg:h-10 bg-gradient-to-br from-purple-500 via-pink-500 to-orange-500 rounded-lg flex items-center justify-center shadow-md shadow-purple-500/50 hover:shadow-lg hover:shadow-pink-500/50 transition-all duration-300"
               whileHover={{ 
                 scale: 1.1, 
                 rotate: 5,
@@ -82,13 +116,13 @@ export const Navbar = () => {
               }}
               whileTap={{ scale: 0.95 }}
             >
-              <span className="text-white font-bold text-base sm:text-lg md:text-lg lg:text-xl">E</span>
+              <span className="text-white font-bold text-base sm:text-lg md:text-lg lg:text-xl">V</span>
             </motion.div>
             <motion.span 
-              className="text-lg sm:text-xl md:text-xl lg:text-2xl font-bold bg-gradient-to-r from-[hsl(var(--brand-blue))] to-[hsl(var(--brand-blue))] bg-clip-text text-transparent hover:opacity-80 transition-opacity duration-300"
+              className="text-lg sm:text-xl md:text-xl lg:text-2xl font-bold bg-gradient-to-r from-purple-600 via-pink-500 to-orange-500 bg-clip-text text-transparent hover:opacity-80 transition-opacity duration-300"
               whileHover={{ scale: 1.05 }}
             >
-              EmailPro Agency
+              VideoPro Studio
             </motion.span>
           </motion.div>
 
@@ -101,10 +135,11 @@ export const Navbar = () => {
                 initial={{ opacity: 0, y: -20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: 0.3 + index * 0.1 }}
-                className="relative text-[hsl(210,15%,20%)] dark:text-foreground hover:text-[hsl(211,100%,50%)] dark:hover:text-gold transition-all duration-200 font-semibold text-sm md:text-sm lg:text-base px-2 md:px-2.5 lg:px-3 py-2 rounded-lg hover:bg-[hsl(210,20%,96%)] dark:hover:bg-gold/10 group whitespace-nowrap"
+                className={`relative text-foreground transition-all duration-200 font-semibold text-sm md:text-sm lg:text-base px-2 md:px-2.5 lg:px-3 py-2 rounded-lg hover:bg-foreground/5 dark:hover:bg-white/10 group whitespace-nowrap ${activeSection === item.href.replace('#','') ? 'text-[hsl(var(--brand-blue))]' : ''}`}
+                aria-current={activeSection === item.href.replace('#','') ? 'page' : undefined}
               >
                 {item.name}
-                <span className="absolute bottom-0 left-1/2 -translate-x-1/2 w-0 h-0.5 bg-gradient-to-r from-[hsl(211,100%,50%)] to-[hsl(199,89%,48%)] group-hover:w-3/4 transition-all duration-300" />
+                <span className={`absolute bottom-0 left-1/2 -translate-x-1/2 h-0.5 bg-gradient-to-r from-[hsl(var(--brand-blue))] via-[hsl(var(--brand-blue))] to-[hsl(var(--brand-blue))] transition-all duration-300 ${activeSection === item.href.replace('#','') ? 'w-3/4' : 'w-0 group-hover:w-3/4'}`} />
               </motion.a>
             ))}
           </div>
@@ -137,7 +172,7 @@ export const Navbar = () => {
                 variant="gold"
                 size="sm"
                 onClick={() => window.location.href = '/book-meeting'}
-                className="text-sm md:text-sm lg:text-base px-4 md:px-4 lg:px-7 py-2 md:py-2 lg:py-2.5 cursor-pointer bg-gradient-to-r from-[hsl(var(--brand-blue))] to-[hsl(var(--brand-blue))] hover:opacity-95 text-white border-0 hover:shadow-lg hover:shadow-[hsl(var(--brand-blue))]/30 transition-all duration-300 hover:scale-105 font-semibold whitespace-nowrap"
+                className="text-sm md:text-sm lg:text-base px-4 md:px-4 lg:px-7 py-2 md:py-2 lg:py-2.5 cursor-pointer bg-gradient-to-r from-purple-600 via-pink-500 to-orange-500 hover:from-purple-700 hover:via-pink-600 hover:to-orange-600 dark:from-purple-500 dark:via-pink-400 dark:to-orange-400 dark:hover:from-purple-600 dark:hover:via-pink-500 dark:hover:to-orange-500 text-white border-0 hover:shadow-lg hover:shadow-purple-500/50 dark:hover:shadow-purple-900/50 transition-all duration-300 hover:scale-105 font-semibold whitespace-nowrap"
               >
                 Book a Consultation
               </Button>
@@ -192,7 +227,7 @@ export const Navbar = () => {
               animate={{ opacity: 1, height: "auto" }}
               exit={{ opacity: 0, height: 0 }}
               transition={{ duration: 0.3, ease: "easeInOut" }}
-              className="md:hidden overflow-hidden bg-background/98 backdrop-blur-xl border-t border-border/50 shadow-lg"
+              className="md:hidden overflow-hidden hero-section-bg backdrop-blur-xl border-t border-border/50 shadow-lg"
             >
               <div className="py-3 space-y-1">
                 {navItems.map((item, index) => (
@@ -202,7 +237,7 @@ export const Navbar = () => {
                     initial={{ opacity: 0, x: -20 }}
                     animate={{ opacity: 1, x: 0 }}
                     transition={{ duration: 0.2, delay: index * 0.05 }}
-                    className="block text-foreground hover:text-[hsl(211,100%,50%)] hover:bg-[hsl(211,100%,50%)]/10 active:bg-[hsl(211,100%,50%)]/20 transition-all duration-200 font-medium py-3 px-4 rounded-lg mx-2"
+                    className={`block text-foreground hover:text-[hsl(var(--brand-blue))] hover:bg-[hsl(var(--brand-blue))]/10 active:bg-[hsl(var(--brand-blue))]/20 transition-all duration-200 font-medium py-3 px-4 rounded-lg mx-2 ${activeSection === item.href.replace('#','') ? 'text-[hsl(var(--brand-blue))]' : ''}`}
                     onClick={() => setIsOpen(false)}
                   >
                     {item.name}

@@ -4,24 +4,24 @@ import { motion } from "framer-motion";
 
 const testimonials = [
   {
-    name: "Sarah Mitchell",
-    company: "TechVentures Inc.",
-    role: "CEO",
-    content: "Their email management transformed my productivity. I went from drowning in 200+ daily emails to having a perfectly organized inbox. Response times improved by 75%.",
+    name: "Alex Rivera",
+    company: "TechTalk YouTube",
+    role: "Content Creator",
+    content: "Their video editing transformed my channel. My watch time increased 200% and subscriber growth tripled. The color grading and pacing are absolutely cinematic.",
     rating: 5
   },
   {
-    name: "Michael Chen",
-    company: "GrowthLabs",
-    role: "Marketing Director",
-    content: "The email campaign management service doubled our open rates and tripled conversions. Their automation workflows saved us 15 hours per week.",
+    name: "Emma Chen",
+    company: "FitLife Brand",
+    role: "Social Media Manager",
+    content: "We went from 10K to 500K followers in 6 months thanks to their viral shortform editing. Every Reel they edit hits 100K+ views. Absolute game-changer.",
     rating: 5
   },
   {
-    name: "Jessica Thompson",
-    company: "Stellar Consulting",
-    role: "Founder",
-    content: "Best investment for my business. They handle everything from inbox organization to client communications. I can finally focus on strategy instead of email chaos.",
+    name: "Marcus Johnson",
+    company: "Podcast Pro",
+    role: "Podcast Host",
+    content: "Best investment for my podcast. They handle everything from cutting to motion graphics. My episodes look professional and my audience retention is up 85%.",
     rating: 5
   }
 ];
@@ -30,7 +30,7 @@ export const Testimonials = () => {
   return (
     <motion.section 
       id="testimonials"
-      className="relative py-8 sm:py-10 md:py-12 lg:py-14 bg-background text-foreground z-40"
+      className="relative py-8 sm:py-10 md:py-12 lg:py-14 text-foreground z-40"
       initial={{ opacity: 0, y: 100 }}
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true, margin: "-100px" }}
@@ -44,11 +44,11 @@ export const Testimonials = () => {
           viewport={{ once: true }}
           transition={{ duration: 0.6, ease: "easeOut" }}
         >
-          <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-4 sm:mb-6 text-foreground dark:text-white leading-tight tracking-tight px-2">
-            Trusted by <span className="text-primary">500+ Professionals</span>
+          <h2 className="section-heading px-2">
+            Trusted by <span className="gradient-heading">1000+ Creators</span>
           </h2>
           <p className="text-base sm:text-lg md:text-xl text-muted-foreground max-w-2xl px-2 dark:text-white/90">
-            Real results—inbox zero achieved, response times reduced by 75%, and email productivity increased across all industries.
+            Real results—viral videos created, watch time increased by 200%, and audience growth accelerated across all platforms.
           </p>
         </motion.div>
 
@@ -56,7 +56,7 @@ export const Testimonials = () => {
           {testimonials.map((testimonial, index) => (
             <motion.div 
               key={index}
-              className="relative bg-card/50 backdrop-blur-sm border border-[hsl(215,32%,91%)] dark:border-border/40 rounded-xl p-5 sm:p-6 md:p-8 hover:border-[hsl(var(--gold))]/60 dark:hover:border-[hsl(var(--gold))]/60 hover:shadow-[0_20px_60px_-15px_hsl(217_91%_60%/0.3),0_0_30px_hsl(217_91%_60%/0.1)] dark:hover:shadow-[0_20px_60px_-15px_rgba(59,130,246,0.25),0_0_30px_rgba(59,130,246,0.1)] transition-all duration-300 hover:-translate-y-2 group"
+              className="relative bg-card/80 backdrop-blur-sm border border-border rounded-xl p-5 sm:p-6 md:p-8 hover:border-[hsl(var(--brand-blue))]/40 dark:hover:border-[hsl(var(--brand-blue))]/40 hover:shadow-[0_20px_60px_-15px_hsl(217_91%_60%/0.15),0_0_30px_hsl(217_91%_60%/0.05)] dark:hover:shadow-[0_20px_60px_-15px_rgba(59,130,246,0.15),0_0_30px_rgba(59,130,246,0.05)] transition-all duration-300 hover:-translate-y-2 group"
               initial={{ opacity: 0, y: 50 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
@@ -86,7 +86,7 @@ export const Testimonials = () => {
                     whileInView={{ scale: 1, rotate: 0 }}
                     transition={{ delay: 0.1 * i, type: "spring", stiffness: 200 }}
                   >
-                    <Star className="w-4 h-4 sm:w-5 sm:h-5 fill-gold text-gold drop-shadow-[0_2px_4px_rgba(59,130,246,0.3)]" />
+                    <Star className="w-4 h-4 sm:w-5 sm:h-5 fill-yellow-400 text-yellow-400 drop-shadow-[0_2px_4px_rgba(251,191,36,0.5)]" />
                   </motion.div>
                 ))}
               </div>
@@ -105,23 +105,23 @@ export const Testimonials = () => {
         </div>
 
         <motion.div 
-          className="relative bg-gradient-to-br from-card/80 to-card/60 backdrop-blur-xl border border-[hsl(215,32%,91%)] dark:border-border/40 rounded-2xl p-6 sm:p-8 md:p-10 lg:p-12 max-w-5xl mx-auto hover:border-[hsl(var(--gold))]/70 dark:hover:border-[hsl(var(--gold))]/70 hover:shadow-[0_25px_70px_-15px_hsl(217_91%_60%/0.35),0_0_40px_hsl(217_91%_60%/0.15)] dark:hover:shadow-[0_25px_70px_-15px_rgba(59,130,246,0.3),0_0_40px_rgba(59,130,246,0.1)] transition-all duration-300 overflow-hidden group"
+          className="relative bg-card/80 backdrop-blur-xl border border-border rounded-2xl p-6 sm:p-8 md:p-10 lg:p-12 max-w-5xl mx-auto hover:border-[hsl(var(--brand-blue))]/40 dark:hover:border-[hsl(var(--brand-blue))]/40 hover:shadow-[0_25px_70px_-15px_hsl(217_91%_60%/0.15),0_0_40px_hsl(217_91%_60%/0.05)] dark:hover:shadow-[0_25px_70px_-15px_rgba(59,130,246,0.15),0_0_40px_rgba(59,130,246,0.05)] transition-all duration-300 overflow-hidden group"
           initial={{ opacity: 0, y: 50 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6, delay: 0.4, ease: "easeOut" }}
         >
           <div className="text-left">
-            <span className="inline-block px-3 py-1 bg-card dark:bg-[hsl(250,45%,20%)]/50 text-[hsl(var(--gold))] dark:text-[hsl(var(--gold))] text-xs sm:text-sm font-semibold rounded-full mb-3 sm:mb-4">
+            <span className="inline-block px-3 py-1 bg-gradient-to-r from-purple-600 via-pink-500 to-orange-500 text-white text-xs sm:text-sm font-semibold rounded-full mb-3 sm:mb-4 shadow-lg shadow-purple-500/50">
               Success Story
             </span>
-            <h3 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-3 sm:mb-4 text-foreground">
-              Case Study: <span className="text-primary">75% Time Saved with Email Management</span>
+            <h3 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-3 sm:mb-4 text-gray-900 dark:text-white">
+              Case Study: <span className="gradient-heading">10M Views in 3 Months</span>
             </h3>
             <p className="text-sm sm:text-base md:text-lg text-muted-foreground mb-5 sm:mb-6 leading-relaxed max-w-3xl">
-              See how we helped a Fortune 500 executive achieve inbox zero and reduce email processing time from 4 hours to 1 hour daily.
+              See how we helped a lifestyle creator go from 50K to 500K followers with viral shortform content and professional longform videos.
             </p>
-            <Button size="lg" className="w-full sm:w-auto text-sm sm:text-base px-6 sm:px-8 py-3 sm:py-4 bg-gradient-to-r from-[hsl(var(--gold))] to-[hsl(var(--brand-blue))] text-white hover:opacity-95 transition-all duration-300 hover:scale-105 font-semibold border-0">
+            <Button size="lg" className="w-full sm:w-auto text-sm sm:text-base px-6 sm:px-8 py-3 sm:py-4 bg-gradient-to-r from-purple-600 via-pink-500 to-orange-500 text-white hover:from-purple-700 hover:via-pink-600 hover:to-orange-600 transition-all duration-300 hover:scale-105 font-semibold border-0 shadow-lg shadow-purple-500/50">
               View Full Case Study
             </Button>
           </div>

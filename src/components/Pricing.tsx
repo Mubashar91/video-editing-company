@@ -21,48 +21,48 @@ interface PricingPlan {
 
 const plans: PricingPlan[] = [
   {
-    name: "Starter",
-    hours: "Up to 100 emails/day",
-    price: 499,
+    name: "Shortform",
+    hours: "4-8 videos/month",
+    price: 399,
     setupFee: 0,
     features: [
-      "Inbox organization & filtering",
-      "Priority inbox setup",
-      "Basic automation rules",
-      "Email response templates",
-      "Weekly performance reports"
+      "TikTok, Reels, Shorts editing",
+      "Fast-paced cuts & transitions",
+      "Trending effects & filters",
+      "Captions & text overlays",
+      "24-hour turnaround"
     ],
     highlighted: false
   },
   {
-    name: "Professional",
-    hours: "Up to 300 emails/day",
-    price: 999,
+    name: "Creator",
+    hours: "8-12 videos/month",
+    price: 799,
     setupFee: 0,
     badge: "Most Popular",
     features: [
-      "Everything in Starter",
-      "Advanced automation & workflows",
-      "Email campaign management",
-      "2-hour response time SLA",
-      "Daily summaries + analytics",
-      "Priority support"
+      "Everything in Shortform",
+      "YouTube longform videos (10-20 min)",
+      "Color grading & correction",
+      "Motion graphics & titles",
+      "Audio mixing & enhancement",
+      "48-hour turnaround"
     ],
     highlighted: true
   },
   {
-    name: "Enterprise",
-    hours: "Unlimited emails",
-    price: 1999,
+    name: "Professional",
+    hours: "Unlimited videos",
+    price: 1499,
     setupFee: 0,
     badge: "Best Value",
     features: [
-      "Everything in Professional",
-      "Dedicated email manager",
-      "Enterprise security protocols",
-      "Custom integrations & API",
-      "24/7 monitoring & support",
-      "Custom SLAs & compliance"
+      "Everything in Creator",
+      "Dedicated video editor",
+      "Advanced VFX & animations",
+      "Custom brand templates",
+      "Priority 24-hour delivery",
+      "Unlimited revisions"
     ],
     highlighted: false
   }
@@ -86,15 +86,12 @@ export const Pricing = () => {
   return (
     <motion.section 
       id="pricing"
-      className="relative py-8 sm:py-12 md:py-16 lg:py-20 bg-background text-foreground z-10 overflow-hidden"
+      className="relative py-8 sm:py-12 md:py-16 lg:py-20 text-foreground z-10 overflow-hidden"
       initial={{ opacity: 0, y: 200 }}
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true, amount: 0.1 }}
       transition={{ duration: 1.2, ease: [0.6, -0.05, 0.01, 0.99] }}
     >
-      {/* Animated background gradients */}
-      <div className="absolute top-0 left-1/4 w-64 h-64 sm:w-80 sm:h-80 md:w-96 md:h-96 bg-gold/10 rounded-full blur-[100px] md:blur-[150px]" />
-      <div className="absolute bottom-0 right-1/4 w-64 h-64 sm:w-80 sm:h-80 md:w-96 md:h-96 bg-gold/10 rounded-full blur-[100px] md:blur-[150px]" />
       <div className="container mx-auto px-4 sm:px-6 md:px-8 lg:px-12 relative z-10">
         <motion.div 
           className="mb-8 sm:mb-10 md:mb-12 lg:mb-16 text-left"
@@ -104,17 +101,17 @@ export const Pricing = () => {
           transition={{ duration: 0.8, delay: 0.2 }}
         >
           <motion.span 
-            className="inline-block px-3 py-1.5 sm:px-4 sm:py-2 bg-gradient-to-br from-[hsl(var(--gold))] via-[hsl(var(--brand-blue))] to-[hsl(var(--gold))] text-white text-xs sm:text-sm font-bold rounded-full mb-3 sm:mb-4 shadow-[0_8px_24px_-6px_rgba(59,130,246,0.4)] border border-white/20 backdrop-blur-sm relative overflow-hidden"
+            className="inline-block px-3 py-1.5 sm:px-4 sm:py-2 bg-gradient-to-r from-purple-600 via-pink-500 to-orange-500 text-white text-xs sm:text-sm font-bold rounded-full mb-3 sm:mb-4 shadow-[0_8px_24px_-6px_rgba(168,85,247,0.6)] border border-white/30 backdrop-blur-sm relative overflow-hidden animate-pulse"
             whileHover={{ scale: 1.05 }}
           >
             <span className="absolute inset-0 bg-gradient-to-r from-white/0 via-white/20 to-white/0 opacity-50"></span>
             <span className="relative z-10">Transparent Pricing</span>
           </motion.span>
-          <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-3 sm:mb-4 text-foreground leading-tight tracking-tight">
-            Email Management <span className="text-primary">Packages</span>
+          <h2 className="section-heading">
+            Video Editing <span className="gradient-heading">Packages</span>
           </h2>
           <p className="text-base sm:text-lg md:text-xl text-muted-foreground max-w-2xl leading-relaxed">
-            Choose a plan that fits your email volume and needs. Professional management with transparent pricing. No hidden fees.
+            Choose a plan that fits your content needs. Professional editing with transparent pricing. No hidden fees.
           </p>
         </motion.div>
 
@@ -126,8 +123,8 @@ export const Pricing = () => {
           viewport={{ once: true }}
           transition={{ duration: 0.6, delay: 0.25 }}
         >
-          <div className="relative overflow-hidden rounded-3xl bg-gradient-to-r from-[hsl(221,54%,53%)] via-[hsl(217,89%,61%)] to-[hsl(221,54%,53%)] p-[3px] shadow-[0_20px_50px_-12px_rgba(62,101,207,0.4)] hover:shadow-[0_25px_60px_-12px_rgba(62,101,207,0.5)] transition-all duration-300">
-            <div className="relative rounded-3xl p-8 sm:p-10 bg-white dark:bg-[hsl(210,20%,12%)] backdrop-blur-xl">
+          <div className="relative overflow-hidden rounded-3xl p-[3px] shadow-[0_20px_50px_-12px_rgba(168,85,247,0.2)] hover:shadow-[0_25px_60px_-12px_rgba(168,85,247,0.3)] transition-all duration-300 border border-border">
+            <div className="relative rounded-3xl p-8 sm:p-10 bg-card backdrop-blur-xl border border-border">
               {/* Decorative elements */}
               <div className="absolute top-0 right-0 w-64 h-64 bg-gradient-to-br from-[hsl(221,54%,53%)]/10 to-transparent rounded-full blur-3xl" />
               <div className="absolute bottom-0 left-0 w-48 h-48 bg-gradient-to-tr from-[hsl(217,89%,61%)]/10 to-transparent rounded-full blur-2xl" />
@@ -135,9 +132,8 @@ export const Pricing = () => {
               <div className="relative flex flex-col sm:flex-row items-center justify-between gap-6">
                 <div className="flex items-start gap-4 text-center sm:text-left flex-1">
                   <motion.div
-                    className="flex-shrink-0 w-14 h-14 sm:w-16 sm:h-16 bg-gradient-to-br from-[hsl(221,54%,53%)] to-[hsl(217,89%,61%)] rounded-2xl flex items-center justify-center shadow-lg"
-                    whileHover={{ scale: 1.05, rotate: 5 }}
-                    transition={{ type: "spring", stiffness: 400, damping: 10 }}
+                    className="flex-shrink-0 w-14 h-14 sm:w-16 sm:h-16 bg-gradient-to-br from-indigo-500 to-purple-600 rounded-2xl flex items-center justify-center shadow-lg shadow-purple-500/50"
+                    whileHover={{ scale: 1.05 }}
                   >
                     <Calendar className="w-7 h-7 sm:w-8 sm:h-8 text-white" />
                   </motion.div>
@@ -146,13 +142,13 @@ export const Pricing = () => {
                       Free 15‑Minute Consultation
                     </h3>
                     <p className="text-sm sm:text-base text-muted-foreground dark:text-white/80 leading-relaxed">
-                      Get expert advice on email management, automation, and workflow optimization before choosing a plan.
+                      Get expert advice on video editing, content strategy, and production workflow before choosing a plan.
                     </p>
                   </div>
                 </div>
                 <Button 
                   size="lg"
-                  className="flex-shrink-0 bg-gradient-to-r from-[hsl(221,54%,53%)] to-[hsl(217,89%,61%)] text-white hover:from-[hsl(221,54%,58%)] hover:to-[hsl(217,89%,66%)] transition-all duration-300 hover:scale-105 hover:shadow-xl font-bold shadow-lg px-8 sm:px-10 py-4 sm:py-5 text-base sm:text-lg border-0 rounded-xl"
+                  className="flex-shrink-0 bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 text-white hover:from-indigo-600 hover:via-purple-600 hover:to-pink-600 transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-purple-500/50 font-bold shadow-lg px-8 sm:px-10 py-4 sm:py-5 text-base sm:text-lg border-0 rounded-xl"
                   onClick={() => window.location.href = '/book-meeting'}
                 >
                   Book Free Call →
@@ -170,8 +166,8 @@ export const Pricing = () => {
           viewport={{ once: true }}
           transition={{ duration: 0.6, delay: 0.3 }}
         >
-          <div className="relative overflow-hidden rounded-3xl bg-gradient-to-r from-[hsl(199,89%,48%)] via-[hsl(217,89%,61%)] to-[hsl(199,89%,48%)] p-[3px] shadow-[0_20px_50px_-12px_rgba(0,172,193,0.4)] hover:shadow-[0_25px_60px_-12px_rgba(0,172,193,0.5)] transition-all duration-300">
-            <div className="relative bg-gradient-to-br from-[hsl(199,89%,97%)] to-[hsl(217,89%,97%)] dark:from-[hsl(210,20%,15%)] dark:to-[hsl(210,20%,12%)] backdrop-blur-xl rounded-3xl p-8 sm:p-10">
+          <div className="relative overflow-hidden rounded-3xl p-[3px] shadow-[0_20px_50px_-12px_rgba(16,185,129,0.2)] hover:shadow-[0_25px_60px_-12px_rgba(16,185,129,0.3)] transition-all duration-300 border border-border">
+            <div className="relative bg-card backdrop-blur-xl rounded-3xl p-8 sm:p-10 border border-border">
               {/* Animated background elements */}
               <div className="absolute inset-0 bg-gradient-to-br from-[hsl(199,89%,48%)]/5 via-transparent to-[hsl(217,89%,61%)]/5 rounded-3xl" />
               <motion.div 
@@ -183,7 +179,7 @@ export const Pricing = () => {
               <div className="relative flex flex-col sm:flex-row items-center justify-between gap-6">
                 <div className="flex items-start gap-5 text-center sm:text-left flex-1">
                   <motion.div
-                    className="flex-shrink-0 w-16 h-16 sm:w-18 sm:h-18 bg-gradient-to-br from-[hsl(199,89%,48%)] to-[hsl(217,89%,61%)] rounded-2xl flex items-center justify-center shadow-xl relative"
+                    className="flex-shrink-0 w-16 h-16 sm:w-18 sm:h-18 bg-gradient-to-br from-green-500 to-emerald-600 rounded-2xl flex items-center justify-center shadow-xl shadow-emerald-500/50 relative"
                     animate={{ 
                       rotate: [0, 5, -5, 0],
                       y: [0, -5, 0]
@@ -201,19 +197,19 @@ export const Pricing = () => {
                   </motion.div>
                   <div className="flex-1">
                     <h3 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-2 text-foreground dark:text-white">
-                      One Week Free Trial
+                      First Video 50% Off
                     </h3>
                     <p className="text-sm sm:text-base md:text-lg text-muted-foreground dark:text-white/80 leading-relaxed">
-                      New customers get <span className="font-bold text-[hsl(199,89%,48%)] dark:text-[hsl(199,89%,60%)] px-2 py-0.5 bg-[hsl(199,89%,48%)]/10 dark:bg-[hsl(199,89%,48%)]/20 rounded-md">7 days free</span> on any plan. No credit card required.
+                      New customers get <span className="font-bold text-[hsl(199,89%,48%)] dark:text-[hsl(199,89%,60%)] px-2 py-0.5 bg-[hsl(199,89%,48%)]/10 dark:bg-[hsl(199,89%,48%)]/20 rounded-md">50% off</span> their first video edit. Experience our quality risk-free.
                     </p>
                   </div>
                 </div>
                 <Button 
                   size="lg"
-                  className="flex-shrink-0 bg-gradient-to-r from-[hsl(199,89%,48%)] to-[hsl(217,89%,61%)] text-white hover:from-[hsl(199,89%,53%)] hover:to-[hsl(217,89%,66%)] transition-all duration-300 hover:scale-105 hover:shadow-2xl font-bold shadow-xl px-8 sm:px-10 py-4 sm:py-5 text-base sm:text-lg border-0 rounded-xl"
+                  className="flex-shrink-0 bg-gradient-to-r from-green-500 via-emerald-500 to-teal-500 text-white hover:from-green-600 hover:via-emerald-600 hover:to-teal-600 transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-emerald-500/50 font-bold shadow-xl px-8 sm:px-10 py-4 sm:py-5 text-base sm:text-lg border-0 rounded-xl"
                   onClick={() => window.location.href = '/book-meeting'}
                 >
-                  Start Free Trial →
+                  Claim 50% Off →
                 </Button>
               </div>
             </div>
@@ -257,7 +253,7 @@ export const Pricing = () => {
                 />
               )}
               
-              <div className={`relative rounded-3xl p-8 sm:p-10 md:p-12 transition-all duration-500 group h-full ${plan.highlighted ? 'bg-gradient-to-br from-[hsl(221,54%,53%)]/5 via-white to-[hsl(217,89%,61%)]/5 dark:from-[hsl(221,54%,53%)]/10 dark:via-[hsl(210,20%,12%)] dark:to-[hsl(217,89%,61%)]/10' : 'bg-white dark:bg-[hsl(210,20%,12%)]'} backdrop-blur-xl text-foreground dark:text-white border-2 ${plan.highlighted ? 'border-[hsl(221,54%,53%)]' : 'border-[hsl(215,32%,91%)] dark:border-border/30'} hover:border-[hsl(221,54%,53%)] dark:hover:border-[hsl(221,54%,53%)] hover:shadow-[0_30px_80px_-15px_rgba(62,101,207,0.4),0_0_50px_rgba(62,101,207,0.15)] dark:hover:shadow-[0_30px_80px_-15px_rgba(62,101,207,0.35),0_0_50px_rgba(62,101,207,0.12)] overflow-hidden`}>
+              <div className={`relative rounded-3xl p-8 sm:p-10 md:p-12 transition-all duration-500 group h-full bg-card/80 backdrop-blur-xl text-foreground dark:text-white border border-border hover:border-[hsl(var(--brand-blue))]/40 dark:hover:border-[hsl(var(--brand-blue))]/40 hover:shadow-[0_30px_80px_-15px_hsl(217_91%_60%/0.2)] dark:hover:shadow-[0_30px_80px_-15px_rgba(59,130,246,0.25)] overflow-hidden`}>
                 {/* Animated background gradient */}
                 <motion.div 
                   className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-700"
@@ -315,7 +311,7 @@ export const Pricing = () => {
                       {plan.hours}
                     </p>
                     <span className="px-3 py-1 text-xs font-medium rounded-full bg-gradient-to-r from-[hsl(221,54%,53%)]/10 to-[hsl(217,89%,61%)]/10 dark:from-[hsl(221,54%,53%)]/20 dark:to-[hsl(217,89%,61%)]/20 text-[hsl(221,54%,53%)] dark:text-[hsl(217,89%,61%)] border border-[hsl(221,54%,53%)]/20">
-                      Email Management
+                      Video Editing
                     </span>
                   </div>
                 </div>
@@ -387,7 +383,7 @@ export const Pricing = () => {
                   <Button 
                     size="lg"
                     onClick={() => window.location.href = '/book-meeting'}
-                    className={`w-full relative z-10 font-bold text-lg py-7 sm:py-8 rounded-2xl transition-all duration-300 group/btn overflow-hidden min-h-[56px] ${plan.highlighted ? 'bg-gradient-to-r from-[hsl(221,54%,53%)] via-[hsl(217,89%,61%)] to-[hsl(221,54%,53%)] shadow-[0_10px_40px_-10px_rgba(62,101,207,0.5)]' : 'bg-gradient-to-r from-[hsl(221,54%,53%)] to-[hsl(217,89%,61%)]'} text-white hover:shadow-[0_15px_50px_-10px_rgba(62,101,207,0.6)] border-0`}
+                    className={`w-full relative z-10 font-bold text-lg py-7 sm:py-8 rounded-2xl transition-all duration-300 group/btn overflow-hidden min-h-[56px] ${plan.highlighted ? 'bg-gradient-to-r from-pink-500 via-rose-500 to-red-500 shadow-[0_10px_40px_-10px_rgba(236,72,153,0.7)]' : 'bg-gradient-to-r from-violet-500 via-purple-500 to-fuchsia-500'} text-white hover:shadow-[0_15px_50px_-10px_rgba(168,85,247,0.8)] border-0`}
                     aria-label={`Get started with ${plan.name} plan - ${plan.hours} at ${Math.round(plan.price * (1 - discount) * vaCount)} per month`}
                   >
                     {/* Animated background */}
@@ -420,7 +416,7 @@ export const Pricing = () => {
     viewport={{ once: true }}
     transition={{ duration: 0.6, delay: 0.5 }}
   >
-    All plans are billed monthly with no long-term contracts. Upgrade or downgrade anytime. Typical turnaround 24–72h depending on volume.
+    All plans are billed monthly with no long-term contracts. Upgrade or downgrade anytime. Typical turnaround 24–48h depending on complexity.
         </motion.p>
       </div>
     </motion.section>
