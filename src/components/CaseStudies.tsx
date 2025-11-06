@@ -82,6 +82,44 @@ const caseStudies: CaseStudy[] = [
     testimonialRole: "Producer, WaveCast Studio",
     image: "https://images.unsplash.com/photo-1511671782779-c97d3d27a1d4?w=800&h=500&fit=crop",
     stats: { mainResult: "-60% Turnaround", timeframe: "30 days", seoFocus: "Post‑Production" }
+  },
+  {
+    id: 4,
+    title: "Agency Ads: UGC + Motion Graphics that Scale",
+    company: "BrightLabs Media",
+    industry: "Agency / Performance",
+    challenge: "Inconsistent ad quality and slow iteration cycles limited scale on Meta and TikTok.",
+    solution: "Built modular ad templates, kinetic captioning, branded lower-thirds, and weekly variant testing across hooks/payoffs.",
+    results: [
+      { metric: "ROAS", value: "+46%", description: "Improved return on ad spend" },
+      { metric: "CPM", value: "-22%", description: "Cost per 1k impressions" },
+      { metric: "Variations", value: "36", description: "Creative variants produced" },
+      { metric: "Turnaround", value: "48h", description: "From brief to delivery" }
+    ],
+    testimonial: "Creative testing finally clicked. Iterations are fast and on-brand, and scale didn't break quality.",
+    testimonialAuthor: "Nate Brooks",
+    testimonialRole: "Creative Director, BrightLabs",
+    image: "https://images.unsplash.com/photo-1559136555-9303baea8ebd?w=800&h=500&fit=crop",
+    stats: { mainResult: "+46% ROAS", timeframe: "6 weeks", seoFocus: "Ad Creative" }
+  },
+  {
+    id: 5,
+    title: "Course Launch: 0→1 Video System for Coaches",
+    company: "Elevate Coaching",
+    industry: "Education / Coaching",
+    challenge: "No consistent video content engine: sporadic uploads and unbranded visuals hurt conversions.",
+    solution: "Built a weekly content system: longform lesson edits, 12 short clips per module, branded motion package, and audio cleanup.",
+    results: [
+      { metric: "Enrollments", value: "+63%", description: "Lift in first 60 days" },
+      { metric: "Output", value: "12/wk", description: "Shorts produced per week" },
+      { metric: "Watch Time", value: "+31%", description: "Average per video" },
+      { metric: "Production", value: "-35%", description: "Time per module" }
+    ],
+    testimonial: "The system made our launch look premium and consistent. Students stayed engaged and sales followed.",
+    testimonialAuthor: "Alicia Gomez",
+    testimonialRole: "Founder, Elevate Coaching",
+    image: "https://images.unsplash.com/photo-1522202176988-66273c2fd55f?w=800&h=500&fit=crop",
+    stats: { mainResult: "+63% Enrollments", timeframe: "60 days", seoFocus: "Course Content" }
   }
 ];
 
@@ -112,10 +150,10 @@ export const CaseStudies = () => {
             Success Stories
           </span>
           <h2 className="section-heading">
-            Email Management <span className="gradient-heading">Success Stories</span>
+            Video Editing <span className="gradient-heading">Success Stories</span>
           </h2>
           <p className="text-sm sm:text-base md:text-lg lg:text-xl text-muted-foreground max-w-3xl leading-relaxed">
-            See how we transformed email chaos into organized efficiency with smart automation, security protocols, and professional management.
+            Real client outcomes across YouTube, ads, and podcasts—higher retention, faster output, and on-brand visuals at scale.
           </p>
         </motion.div>
 

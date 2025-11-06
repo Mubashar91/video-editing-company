@@ -132,6 +132,67 @@ const blogPosts: BlogPost[] = [
   }
 ];
 
+// Extra posts
+blogPosts.push(
+  {
+    id: 7,
+    title: "DaVinci Resolve: Creator-Friendly Color Workflow",
+    excerpt: "From balance to look—a simple, repeatable node tree for YouTube and shorts.",
+    content: `
+      <h2>Node Tree</h2>
+      <ul>
+        <li>Balance: WB, exposure, match shots</li>
+        <li>Look: Contrast curve, soft rolloff</li>
+        <li>Skin: Isolate and protect tones</li>
+        <li>Brand: LUT/OFX overlays and grain</li>
+      </ul>
+    `,
+    author: "Color Team",
+    date: "August 02, 2025",
+    readTime: "6 min read",
+    category: "Color",
+    image: "https://images.unsplash.com/photo-1526045612212-70caf35c14df?w=800&auto=format&fit=crop&q=80"
+  },
+  {
+    id: 8,
+    title: "Retention First: Editing Pacing for YouTube",
+    excerpt: "Cut decisions that keep viewers watching—beats, reveals, and payoff timing.",
+    content: `
+      <h2>Pacing</h2>
+      <ul>
+        <li>Open with payoff, then setup</li>
+        <li>Trim breaths and hesitations</li>
+        <li>Place B‑roll for meaning, not filler</li>
+        <li>CTA beats at natural peaks</li>
+      </ul>
+    `,
+    author: "Editing Team",
+    date: "July 21, 2025",
+    readTime: "7 min read",
+    category: "Workflow",
+    image: "https://images.unsplash.com/photo-1521737604893-d14cc237f11d?w=800&auto=format&fit=crop&q=80"
+  },
+  {
+    id: 9,
+    title: "Caption Styles that Convert on Shorts",
+    excerpt: "Readable, branded captions without clutter—sizes, contrast, and emojis.",
+    content: `
+      <h2>Captions</h2>
+      <ul>
+        <li>High-contrast, stroke or shadow</li>
+        <li>Brand fonts and colors</li>
+        <li>Emojis sparingly for emphasis</li>
+        <li>Safe zones for each platform</li>
+      </ul>
+    `,
+    author: "Shorts Team",
+    date: "July 08, 2025",
+    readTime: "4 min read",
+    category: "Shortform",
+    image: "https://images.unsplash.com/photo-1515378791036-0648a3ef77b2?w=800&auto=format&fit=crop&q=80"
+  }
+);
+
 export const Blog = () => {
   const navigate = useNavigate();
 
@@ -154,13 +215,13 @@ export const Blog = () => {
           transition={{ duration: 0.6 }}
         >
           <span className="inline-block px-3 sm:px-4 py-1.5 sm:py-2 bg-gradient-to-br from-[hsl(var(--gold))] via-[hsl(var(--brand-blue))] to-[hsl(var(--gold))] text-white text-xs sm:text-sm font-semibold rounded-full mb-3 sm:mb-4">
-            Email Insights
+            Editing Insights
           </span>
           <h2 className="section-heading">
-            Blog & <span className="gradient-heading">Email Guides</span>
+            Blog & <span className="gradient-heading">Video Editing Guides</span>
           </h2>
           <p className="text-sm sm:text-base md:text-lg lg:text-xl text-muted-foreground max-w-3xl leading-relaxed">
-            Expert email management strategies, automation tips, security best practices, and productivity guides to master your inbox.
+            Workflows, grading, motion, audio, and shorts—everything you need to produce fast, consistent, on-brand videos.
           </p>
         </motion.div>
 

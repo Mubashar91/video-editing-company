@@ -66,7 +66,7 @@ export const FAQ = () => {
               viewport={{ once: true }}
               transition={{ delay: 0.2, type: "spring", stiffness: 120 }}
             >
-              <div className="px-4 py-2 bg-gradient-to-r from-purple-600 via-pink-500 to-orange-500 backdrop-blur-sm rounded-full text-sm font-semibold text-white flex items-center gap-2 border border-white/30 shadow-lg shadow-purple-500/50 animate-pulse">
+              <div className="px-4 py-2 bg-gradient-to-r from-yellow-500 via-orange-500 to-amber-500 backdrop-blur-sm rounded-full text-sm font-semibold text-white flex items-center gap-2 border border-white/30 shadow-lg shadow-purple-500/50 animate-pulse">
                 <HelpCircle className="w-4 h-4" />
                 <span>Video Editing FAQs</span>
               </div>

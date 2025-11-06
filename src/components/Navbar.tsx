@@ -119,7 +119,7 @@ export const Navbar = () => {
               <span className="text-white font-bold text-base sm:text-lg md:text-lg lg:text-xl">V</span>
             </motion.div>
             <motion.span 
-              className="text-lg sm:text-xl md:text-xl lg:text-2xl font-bold bg-gradient-to-r from-purple-600 via-pink-500 to-orange-500 bg-clip-text text-transparent hover:opacity-80 transition-opacity duration-300"
+              className="text-lg sm:text-xl md:text-xl lg:text-2xl font-bold bg-gradient-to-r from-yellow-500 via-orange-500 to-amber-500 bg-clip-text text-transparent hover:opacity-80 transition-opacity duration-300"
               whileHover={{ scale: 1.05 }}
             >
               VideoPro Studio
@@ -172,7 +172,7 @@ export const Navbar = () => {
                 variant="gold"
                 size="sm"
                 onClick={() => window.location.href = '/book-meeting'}
-                className="text-sm md:text-sm lg:text-base px-4 md:px-4 lg:px-7 py-2 md:py-2 lg:py-2.5 cursor-pointer bg-gradient-to-r from-purple-600 via-pink-500 to-orange-500 hover:from-purple-700 hover:via-pink-600 hover:to-orange-600 dark:from-purple-500 dark:via-pink-400 dark:to-orange-400 dark:hover:from-purple-600 dark:hover:via-pink-500 dark:hover:to-orange-500 text-white border-0 hover:shadow-lg hover:shadow-purple-500/50 dark:hover:shadow-purple-900/50 transition-all duration-300 hover:scale-105 font-semibold whitespace-nowrap"
+                className="text-sm md:text-sm lg:text-base px-4 md:px-4 lg:px-7 py-2 md:py-2 lg:py-2.5 cursor-pointer bg-gradient-to-r from-yellow-500 via-orange-500 to-amber-500 hover:from-purple-700 hover:via-pink-600 hover:to-orange-600 dark:from-purple-500 dark:via-pink-400 dark:to-orange-400 dark:hover:from-purple-600 dark:hover:via-pink-500 dark:hover:to-orange-500 text-white border-0 hover:shadow-lg hover:shadow-purple-500/50 dark:hover:shadow-purple-900/50 transition-all duration-300 hover:scale-105 font-semibold whitespace-nowrap"
               >
                 Book a Consultation
               </Button>

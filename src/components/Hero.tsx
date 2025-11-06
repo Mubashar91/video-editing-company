@@ -112,7 +112,7 @@ export const Hero = () => {
             }}
           >
             <motion.div 
-              className="inline-block mb-3 sm:mb-4 md:mb-2 px-3 sm:px-4 py-1.5 sm:py-2 bg-gradient-to-r from-purple-600 via-pink-500 to-orange-500 text-white rounded-full text-xs sm:text-sm font-semibold shadow-lg shadow-purple-500/50 relative overflow-hidden"
+              className="inline-block mb-3 sm:mb-4 md:mb-2 px-3 sm:px-4 py-1.5 sm:py-2 bg-gradient-to-r from-yellow-500 via-orange-500 to-amber-500 text-white rounded-full text-xs sm:text-sm font-semibold shadow-lg shadow-purple-500/50 relative overflow-hidden"
               initial={{ scale: 0.8, opacity: 0 }}
               animate={{ scale: 1, opacity: 1 }}
               transition={{ duration: 0.5, delay: 0.3 }}
@@ -146,7 +146,7 @@ export const Hero = () => {
                   Raw Footage Into Viral Content
                 </span>
                 <motion.span
-                  className="absolute -bottom-2 left-0 right-0 h-1 bg-gradient-to-r from-purple-600 via-pink-500 to-orange-500 rounded-full dark:from-purple-400 dark:via-pink-400 dark:to-orange-400"
+                  className="absolute -bottom-2 left-0 right-0 h-1 bg-gradient-to-r from-yellow-500 via-orange-500 to-amber-500 rounded-full dark:from-purple-400 dark:via-pink-400 dark:to-orange-400"
                   initial={{ scaleX: 0 }}
                   animate={{ scaleX: 1 }}
                   transition={{ duration: 0.8, delay: 1 }}
@@ -179,7 +179,7 @@ export const Hero = () => {
                 <Button 
                   size="lg"
                   onClick={() => window.location.href = '/book-meeting'}
-                  className="bg-gradient-to-r from-purple-600 via-pink-500 to-orange-500 dark:from-purple-500 dark:via-pink-400 dark:to-orange-400 text-white hover:from-purple-700 hover:via-pink-600 hover:to-orange-600 dark:hover:from-purple-600 dark:hover:via-pink-500 dark:hover:to-orange-500 px-8 py-6 rounded-xl font-bold text-lg transition-all relative overflow-hidden group shadow-2xl shadow-purple-500/50 hover:shadow-pink-500/60 dark:hover:shadow-purple-900/50 border-2 border-white/20 dark:border-white/10"
+                  className="bg-gradient-to-r from-yellow-500 via-orange-500 to-amber-500 dark:from-purple-500 dark:via-pink-400 dark:to-orange-400 text-white hover:from-purple-700 hover:via-pink-600 hover:to-orange-600 dark:hover:from-purple-600 dark:hover:via-pink-500 dark:hover:to-orange-500 px-8 py-6 rounded-xl font-bold text-lg transition-all relative overflow-hidden group shadow-2xl shadow-purple-500/50 hover:shadow-pink-500/60 dark:hover:shadow-purple-900/50 border-2 border-white/20 dark:border-white/10"
                   aria-label="Book a free 30-minute design consultation"
                 >
                   <motion.span 

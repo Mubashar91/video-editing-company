@@ -106,7 +106,7 @@ export const FinalCTA = () => {
           >
             <span className="block drop-shadow-lg">Ready to Transform</span>
             <span className="relative inline-block mt-2 sm:mt-3">
-              <span className="relative z-10 bg-gradient-to-r from-purple-600 via-pink-500 to-orange-500 bg-clip-text text-transparent drop-shadow-2xl animate-gradient">
+              <span className="relative z-10 bg-gradient-to-r from-yellow-500 via-orange-500 to-amber-500 bg-clip-text text-transparent drop-shadow-2xl animate-gradient">
                 Your Videos?
               </span>
               <motion.span 
@@ -156,7 +156,7 @@ export const FinalCTA = () => {
             <Button 
               size="lg"
               onClick={() => window.location.href = '/book-meeting'}
-              className="bg-gradient-to-r from-purple-600 via-pink-500 to-orange-500 text-white hover:from-purple-700 hover:via-pink-600 hover:to-orange-600 group px-8 sm:px-10 py-5 sm:py-6 text-base sm:text-lg font-bold rounded-2xl shadow-[0_20px_60px_-15px_rgba(168,85,247,0.6),0_0_40px_rgba(236,72,153,0.4)] hover:shadow-[0_25px_70px_-15px_rgba(168,85,247,0.8),0_0_60px_rgba(236,72,153,0.6)] transition-all duration-300 border-0 relative overflow-hidden"
+              className="bg-gradient-to-r from-yellow-500 via-orange-500 to-amber-500 text-white hover:from-purple-700 hover:via-pink-600 hover:to-orange-600 group px-8 sm:px-10 py-5 sm:py-6 text-base sm:text-lg font-bold rounded-2xl shadow-[0_20px_60px_-15px_rgba(168,85,247,0.6),0_0_40px_rgba(236,72,153,0.4)] hover:shadow-[0_25px_70px_-15px_rgba(168,85,247,0.8),0_0_60px_rgba(236,72,153,0.6)] transition-all duration-300 border-0 relative overflow-hidden"
             >
               <span className="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></span>
               <span className="relative flex items-center gap-2">

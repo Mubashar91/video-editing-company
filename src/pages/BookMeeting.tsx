@@ -29,18 +29,18 @@ export const BookMeeting = () => {
   }, []);
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-background via-muted/10 to-background relative overflow-hidden">
-      {/* Enhanced Background decoration */}
-      <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-gold/5 rounded-full blur-[150px] pointer-events-none" />
-      <div className="absolute bottom-0 left-0 w-[500px] h-[500px] bg-gold/5 rounded-full blur-[150px] pointer-events-none" />
-      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[300px] h-[300px] bg-gold/3 rounded-full blur-[120px] pointer-events-none" />
+    <div className="min-h-screen hero-section-bg text-foreground relative overflow-hidden">
+      {/* Subtle Background decoration */}
+      <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-foreground/5 rounded-full blur-[150px] pointer-events-none" />
+      <div className="absolute bottom-0 left-0 w-[500px] h-[500px] bg-foreground/5 rounded-full blur-[150px] pointer-events-none" />
+      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[300px] h-[300px] bg-foreground/5 rounded-full blur-[120px] pointer-events-none" />
       
       {/* Enhanced Professional Navbar */}
       <motion.nav
         className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
           scrolled
-            ? "bg-background/98 backdrop-blur-2xl border-b-2 border-gold/20 shadow-2xl shadow-gold/5"
-            : "bg-background/90 backdrop-blur-xl border-b border-border/30"
+            ? "hero-section-bg backdrop-blur-2xl border-b border-border/60 shadow-[0_8px_32px_-8px_rgba(0,0,0,0.12)]"
+            : "hero-section-bg backdrop-blur-xl border-b border-border/40"
         }`}
         initial={{ y: -100 }}
         animate={{ y: 0 }}
@@ -48,7 +48,7 @@ export const BookMeeting = () => {
       >
         <div className="container mx-auto px-4 sm:px-6 md:px-8">
           <div className="flex items-center justify-between h-16 sm:h-20">
-            {/* Enhanced Logo */}
+            {/* Logo */}
             <motion.div
               initial={{ opacity: 0, x: -20 }}
               animate={{ opacity: 1, x: 0 }}
@@ -58,45 +58,45 @@ export const BookMeeting = () => {
               whileHover={{ scale: 1.02 }}
             >
               <motion.div
-                className="relative w-10 h-10 sm:w-12 sm:h-12 bg-gradient-to-br from-[hsl(var(--brand-blue))] to-[hsl(var(--brand-blue))] rounded-2xl flex items-center justify-center shadow-xl group-hover:shadow-2xl group-hover:shadow-[hsl(var(--brand-blue))]/30 transition-all duration-500"
+                className="relative w-10 h-10 sm:w-12 sm:h-12 bg-gradient-to-br from-yellow-500 via-orange-500 to-amber-500 rounded-2xl flex items-center justify-center shadow-xl group-hover:shadow-2xl group-hover:shadow-purple-500/30 transition-all duration-500"
                 whileHover={{ rotate: 5, scale: 1.1 }}
                 transition={{ type: "spring", stiffness: 400 }}
               >
-                <Mail className="w-5 h-5 sm:w-6 sm:h-6 text-white" />
+                <Video className="w-5 h-5 sm:w-6 sm:h-6 text-white" />
                 <div className="absolute inset-0 rounded-2xl bg-gradient-to-br from-white/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
               </motion.div>
               <div className="flex flex-col">
-                <span className="text-xl sm:text-2xl font-black bg-gradient-to-r from-foreground via-foreground to-foreground/90 bg-clip-text text-transparent group-hover:from-[hsl(var(--brand-blue))] group-hover:to-[hsl(var(--brand-blue))] transition-all duration-300">
-                  EmailPro Agency
+                <span className="text-xl sm:text-2xl font-black bg-gradient-to-r from-yellow-500 via-orange-500 to-amber-500 bg-clip-text text-transparent transition-all duration-300">
+                  VideoPro Studio
                 </span>
-                <span className="text-[10px] sm:text-xs text-[hsl(var(--brand-blue))]/80 font-semibold -mt-1 tracking-wide">Email Management</span>
+                <span className="text-[10px] sm:text-xs text-muted-foreground font-semibold -mt-1 tracking-wide">Video Editing</span>
               </div>
             </motion.div>
 
-            {/* Enhanced Desktop Navigation */}
+            {/* Desktop Navigation */}
             <div className="hidden md:flex items-center gap-2 lg:gap-6">
               <Button
                 variant="ghost"
                 onClick={() => navigate("/")}
-                className="text-muted-foreground hover:text-gold hover:bg-gold/10 transition-all duration-300 font-semibold px-4 py-2 rounded-xl group"
+                className="text-muted-foreground hover:text-foreground hover:bg-foreground/10 transition-all duration-300 font-semibold px-4 py-2 rounded-xl group"
               >
                 <ArrowLeft className="w-4 h-4 mr-2 group-hover:-translate-x-1 transition-transform duration-300" />
                 Home
               </Button>
               
               <div className="hidden lg:flex items-center gap-4 px-4 py-2 rounded-xl bg-muted/30 border border-border/50">
-                <a href="tel:+1234567890" className="flex items-center gap-2 text-muted-foreground hover:text-gold transition-all duration-300 font-medium group">
-                  <div className="w-8 h-8 rounded-lg bg-gold/10 flex items-center justify-center group-hover:bg-gold/20 transition-all duration-300">
-                    <Phone className="w-4 h-4 text-gold" />
+                <a href="tel:+1234567890" className="flex items-center gap-2 text-muted-foreground hover:text-foreground transition-all duration-300 font-medium group">
+                  <div className="w-8 h-8 rounded-lg bg-foreground/10 flex items-center justify-center group-hover:bg-foreground/20 transition-all duration-300">
+                    <Phone className="w-4 h-4 text-foreground" />
                   </div>
                   <span className="text-sm">+1 (234) 567-890</span>
                 </a>
                 <div className="w-px h-6 bg-border/50" />
-                <a href="mailto:hello@emailproagency.com" className="flex items-center gap-2 text-muted-foreground hover:text-gold transition-all duration-300 font-medium group">
-                  <div className="w-8 h-8 rounded-lg bg-gold/10 flex items-center justify-center group-hover:bg-gold/20 transition-all duration-300">
-                    <Mail className="w-4 h-4 text-gold" />
+                <a href="mailto:hello@videoprostudio.com" className="flex items-center gap-2 text-muted-foreground hover:text-foreground transition-all duration-300 font-medium group">
+                  <div className="w-8 h-8 rounded-lg bg-foreground/10 flex items-center justify-center group-hover:bg-foreground/20 transition-all duration-300">
+                    <Mail className="w-4 h-4 text-foreground" />
                   </div>
-                  <span className="text-sm">hello@emailproagency.com</span>
+                  <span className="text-sm">hello@videoprostudio.com</span>
                 </a>
               </div>
               
@@ -106,7 +106,7 @@ export const BookMeeting = () => {
               >
                 <Button
                   onClick={() => document.querySelector('.calendly-inline-widget')?.scrollIntoView({ behavior: 'smooth' })}
-                  className="w-full sm:w-auto px-8 py-4 bg-gradient-to-r from-[hsl(var(--brand-blue))] to-[hsl(var(--brand-blue))] hover:opacity-90 text-white font-bold rounded-xl transition-all duration-300 shadow-lg hover:shadow-xl hover:scale-105 flex items-center justify-center gap-2"
+                  className="w-full sm:w-auto px-8 py-4 bg-gradient-to-r from-yellow-500 via-orange-500 to-amber-500 hover:opacity-90 text-white font-bold rounded-xl transition-all duration-300 shadow-lg hover:shadow-xl hover:scale-105 flex items-center justify-center gap-2"
                 >
                   <Calendar className="w-4 h-4 mr-2" />
                   Book Now
@@ -118,7 +118,7 @@ export const BookMeeting = () => {
             <Button
               variant="ghost"
               size="icon"
-              className="md:hidden relative w-11 h-11 rounded-xl border border-border/50 hover:border-gold/50 hover:bg-gold/5 transition-all duration-300"
+              className="md:hidden relative w-11 h-11 rounded-xl border border-border/50 hover:bg-foreground/10 transition-all duration-300"
               onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
             >
               <AnimatePresence mode="wait">
@@ -131,7 +131,7 @@ export const BookMeeting = () => {
                   className="flex items-center justify-center"
                 >
                   {mobileMenuOpen ? (
-                    <X className="h-5 w-5 text-gold" />
+                    <X className="h-5 w-5 text-foreground" />
                   ) : (
                     <Menu className="h-5 w-5 text-foreground" />
                   )}
@@ -148,7 +148,7 @@ export const BookMeeting = () => {
                 animate={{ opacity: 1, height: "auto" }}
                 exit={{ opacity: 0, height: 0 }}
                 transition={{ duration: 0.4, type: "spring" }}
-                className="md:hidden border-t-2 border-gold/20 bg-background/95 backdrop-blur-xl"
+                className="md:hidden border-t border-border/50 hero-section-bg backdrop-blur-xl"
               >
                 <div className="py-6 space-y-4">
                   {/* Book Now CTA */}
@@ -163,7 +163,7 @@ export const BookMeeting = () => {
                         document.querySelector('.calendly-inline-widget')?.scrollIntoView({ behavior: 'smooth' });
                         setMobileMenuOpen(false);
                       }}
-                      className="w-full bg-gradient-to-r from-[hsl(var(--brand-blue))] to-[hsl(var(--brand-blue))] hover:opacity-90 text-white font-bold py-3 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300"
+                      className="w-full bg-gradient-to-r from-yellow-500 via-orange-500 to-amber-500 hover:opacity-90 text-white font-bold py-3 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300"
                     >
                       <Calendar className="w-5 h-5 mr-2" />
                       Book Your Meeting Now
@@ -190,13 +190,13 @@ export const BookMeeting = () => {
                   <div className="space-y-2 px-4">
                     <motion.a
                       href="tel:+1234567890"
-                      className="flex items-center gap-3 p-3 rounded-xl text-muted-foreground hover:text-gold hover:bg-gold/5 transition-all duration-300 group"
+                      className="flex items-center gap-3 p-3 rounded-xl text-muted-foreground hover:text-foreground hover:bg-foreground/5 transition-all duration-300 group"
                       initial={{ x: -20, opacity: 0 }}
                       animate={{ x: 0, opacity: 1 }}
                       transition={{ delay: 0.3 }}
                     >
-                      <div className="w-10 h-10 rounded-xl bg-gold/10 flex items-center justify-center group-hover:bg-gold/20 transition-all duration-300">
-                        <Phone className="w-5 h-5 text-gold" />
+                      <div className="w-10 h-10 rounded-xl bg-foreground/10 flex items-center justify-center group-hover:bg-foreground/20 transition-all duration-300">
+                        <Phone className="w-5 h-5 text-foreground" />
                       </div>
                       <div className="flex flex-col">
                         <span className="text-xs text-muted-foreground/60 font-medium">Call Us</span>
@@ -211,8 +211,8 @@ export const BookMeeting = () => {
                       animate={{ x: 0, opacity: 1 }}
                       transition={{ delay: 0.4 }}
                     >
-                      <div className="w-10 h-10 rounded-xl bg-gold/10 flex items-center justify-center group-hover:bg-gold/20 transition-all duration-300">
-                        <Mail className="w-5 h-5 text-gold" />
+                        <div className="w-10 h-10 rounded-xl bg-foreground/10 flex items-center justify-center group-hover:bg-foreground/20 transition-all duration-300">
+                        <Mail className="w-5 h-5 text-foreground" />
                       </div>
                       <div className="flex flex-col">
                         <span className="text-xs text-muted-foreground/60 font-medium">Email Us</span>
@@ -239,11 +239,11 @@ export const BookMeeting = () => {
           >
             {/* Section Header */}
             <div>
-              <h2 className="text-2xl sm:text-3xl font-bold mb-3 text-foreground">
-                Book Your Email Strategy Call
+              <h2 className="section-heading mb-2">
+                Book Your Video Editing Consultation
               </h2>
               <p className="text-base text-muted-foreground leading-relaxed">
-                Schedule a free 15-minute call to discuss how we can transform your email management.
+                Schedule a free 15-minute call to discuss your content goals, editing style, and delivery cadence.
               </p>
             </div>
 
@@ -254,8 +254,8 @@ export const BookMeeting = () => {
               </h3>
               <div className="space-y-4">
                 <div className="flex items-start gap-3">
-                  <div className="flex-shrink-0 w-10 h-10 rounded-lg bg-gold/10 flex items-center justify-center">
-                    <Clock className="w-5 h-5 text-gold" />
+                  <div className="flex-shrink-0 w-10 h-10 rounded-lg bg-foreground/10 flex items-center justify-center">
+                    <Clock className="w-5 h-5 text-foreground" />
                   </div>
                   <div>
                     <h4 className="font-semibold text-base text-foreground mb-1">
@@ -268,8 +268,8 @@ export const BookMeeting = () => {
                 </div>
 
                 <div className="flex items-start gap-3">
-                  <div className="flex-shrink-0 w-10 h-10 rounded-lg bg-gold/10 flex items-center justify-center">
-                    <Video className="w-5 h-5 text-gold" />
+                  <div className="flex-shrink-0 w-10 h-10 rounded-lg bg-foreground/10 flex items-center justify-center">
+                    <Video className="w-5 h-5 text-foreground" />
                   </div>
                   <div>
                     <h4 className="font-semibold text-base text-foreground mb-1">
@@ -282,8 +282,8 @@ export const BookMeeting = () => {
                 </div>
 
                 <div className="flex items-start gap-3">
-                  <div className="flex-shrink-0 w-10 h-10 rounded-lg bg-gold/10 flex items-center justify-center">
-                    <CheckCircle2 className="w-5 h-5 text-gold" />
+                  <div className="flex-shrink-0 w-10 h-10 rounded-lg bg-foreground/10 flex items-center justify-center">
+                    <CheckCircle2 className="w-5 h-5 text-foreground" />
                   </div>
                   <div>
                     <h4 className="font-semibold text-base text-foreground mb-1">
@@ -298,24 +298,24 @@ export const BookMeeting = () => {
             </div>
 
             {/* What We'll Cover */}
-            <div className="space-y-4 p-5 sm:p-6 bg-gold/5 border border-gold/20 rounded-xl">
+            <div className="space-y-4 p-5 sm:p-6 bg-foreground/5 border border-border rounded-xl">
               <h3 className="text-lg sm:text-xl font-bold text-foreground mb-4">
                 We'll Discuss
               </h3>
               <ul className="space-y-3">
                 {[
-                  "Your current email management challenges",
-                  "Inbox organization and automation strategies",
-                  "Custom email workflow solutions",
-                  "Pricing & service package options",
-                  "Next steps to achieve inbox zero",
+                  "Your current editing workflow and content goals",
+                  "Editing style, motion graphics, and captioning needs",
+                  "Shortform vs longform deliverables and cadence",
+                  "Pricing & package options",
+                  "Next steps to launch consistent, on-brand videos",
                 ].map((item, index) => (
                   <li
                     key={index}
                     className="flex items-start gap-3"
                   >
-                    <div className="flex-shrink-0 w-5 h-5 rounded-full bg-gold/20 flex items-center justify-center mt-0.5">
-                      <div className="w-2 h-2 rounded-full bg-gold" />
+                    <div className="flex-shrink-0 w-5 h-5 rounded-full bg-foreground/20 flex items-center justify-center mt-0.5">
+                      <div className="w-2 h-2 rounded-full bg-foreground" />
                     </div>
                     <span className="text-sm text-muted-foreground leading-relaxed">
                       {item}
@@ -328,15 +328,15 @@ export const BookMeeting = () => {
             {/* Trust Indicators */}
             <div className="grid grid-cols-3 gap-4 pt-4">
               <div className="text-center p-4 bg-card border border-border rounded-lg">
-                <div className="text-2xl font-bold text-gold">500+</div>
+                <div className="text-2xl font-bold text-foreground">500+</div>
                 <div className="text-xs text-muted-foreground mt-1">Clients</div>
               </div>
               <div className="text-center p-4 bg-card border border-border rounded-lg">
-                <div className="text-2xl font-bold text-gold">75%</div>
+                <div className="text-2xl font-bold text-foreground">75%</div>
                 <div className="text-xs text-muted-foreground mt-1">Time Saved</div>
               </div>
               <div className="text-center p-4 bg-card border border-border rounded-lg">
-                <div className="text-2xl font-bold text-gold">4.9/5</div>
+                <div className="text-2xl font-bold text-foreground">4.9/5</div>
                 <div className="text-xs text-muted-foreground mt-1">Rating</div>
               </div>
             </div>
@@ -348,15 +348,15 @@ export const BookMeeting = () => {
               <div className="bg-card border border-border rounded-xl p-2 shadow-lg">
                 <div
                   className="calendly-inline-widget rounded-lg overflow-hidden"
-                  data-url="https://calendly.com/mmubasharshahzad40/new-meeting?hide_event_type_details=1&hide_gdpr_banner=1&background_color=000000&text_color=ffffff&primary_color=d4af37"
+                  data-url="https://calendly.com/mmubasharshahzad40/new-meeting?hide_event_type_details=1&hide_gdpr_banner=1&background_color=ffffff&text_color=0f172a&primary_color=8b5cf6"
                   style={{ minWidth: "100%", height: "600px" }}
                 />
               </div>
 
               {/* Bottom Note */}
-              <div className="mt-4 p-4 bg-gold/5 border border-gold/20 rounded-lg text-center">
+              <div className="mt-4 p-4 bg-foreground/5 border border-border rounded-lg text-center">
                 <p className="text-sm text-muted-foreground">
-                  <Shield className="w-4 h-4 inline mr-2 text-gold" />
+                  <Shield className="w-4 h-4 inline mr-2 text-foreground" />
                   <span className="font-semibold text-foreground">100% Secure & Confidential</span>
                 </p>
               </div>
@@ -372,11 +372,11 @@ export const BookMeeting = () => {
           transition={{ duration: 0.8, delay: 0.9 }}
         >
           <div className="text-center mb-8">
-            <h2 className="text-2xl sm:text-3xl font-bold mb-2 text-foreground">
+            <h2 className="section-heading mb-2">
               What Our Clients Say
             </h2>
             <p className="text-muted-foreground">
-              See why professionals trust EmailPro Agency
+              See why creators and brands trust VideoPro Studio
             </p>
           </div>
           
@@ -402,23 +402,23 @@ export const BookMeeting = () => {
               }
             ].map((testimonial, idx) => (
               <motion.div
-                key={testimonial.name}
-                initial={{ opacity: 0, y: 20 }}
+                key={idx}
+                initial={{ opacity: 0, y: 10 }}
                 animate={{ opacity: 1, y: 0 }}
-                transition={{ delay: 1 + idx * 0.1 }}
-                className="bg-card/50 backdrop-blur-sm border border-border/50 rounded-xl p-6 hover:border-gold/50 hover:shadow-lg transition-all duration-300"
+                transition={{ duration: 0.4, delay: 0.1 * idx }}
+                className="bg-card/50 backdrop-blur-sm border border-border/50 rounded-xl p-6 hover:border-foreground/50 hover:shadow-lg transition-all duration-300"
               >
                 <div className="flex gap-1 mb-4">
                   {[...Array(testimonial.rating)].map((_, i) => (
-                    <Star key={i} className="w-4 h-4 text-gold fill-gold" />
+                    <Star key={i} className="w-4 h-4 text-foreground fill-foreground" />
                   ))}
                 </div>
                 <p className="text-sm text-muted-foreground mb-4 leading-relaxed">
                   "{testimonial.text}"
                 </p>
                 <div className="flex items-center gap-3">
-                  <div className="w-10 h-10 rounded-full bg-gradient-to-br from-gold/30 to-gold/10 flex items-center justify-center">
-                    <span className="text-gold font-bold text-sm">
+                  <div className="w-10 h-10 rounded-full bg-foreground/10 flex items-center justify-center">
+                    <span className="text-foreground font-bold text-sm">
                       {testimonial.name.split(' ').map(n => n[0]).join('')}
                     </span>
                   </div>
@@ -432,31 +432,6 @@ export const BookMeeting = () => {
           </div>
         </motion.div>
       </div>
-
-      {/* Professional Footer */}
-      <footer className="border-t border-border/50 bg-card/30 backdrop-blur-sm mt-12">
-        <div className="container mx-auto px-4 sm:px-6 md:px-8 py-8">
-          <div className="flex flex-col sm:flex-row justify-between items-center gap-4">
-            <div className="flex items-center gap-2">
-              <div className="w-8 h-8 bg-gradient-to-br from-[hsl(var(--brand-blue))] to-[hsl(var(--brand-blue))] rounded-lg flex items-center justify-center">
-                <Mail className="w-4 h-4 text-white" />
-              </div>
-              <span className="text-lg font-bold">EmailPro Agency</span>
-            </div>
-            <p className="text-sm text-muted-foreground text-center sm:text-left">
-              © 2025 EmailPro Agency. All rights reserved. Professional Email Management Services.
-            </p>
-            <div className="flex gap-4">
-              <a href="#" className="text-muted-foreground hover:text-gold transition-colors text-sm">
-                Privacy
-              </a>
-              <a href="#" className="text-muted-foreground hover:text-gold transition-colors text-sm">
-                Terms
-              </a>
-            </div>
-          </div>
-        </div>
-      </footer>
     </div>
   );
 };
